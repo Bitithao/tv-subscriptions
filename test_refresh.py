@@ -4,6 +4,23 @@ import refresh_live as live
 
 
 class ValidationTests(unittest.TestCase):
+    def test_quarantined_hosts_never_resolve(self):
+        with patch.object(live.socket, 'getaddrinfo') as resolver:
+            for url in ['http://kkk.jjjj.jiduo.me/a.m3u8', 'https://r.jdshipin.com/a.m3u8']:
+                self.assertFalse(live.candidate_allowed(url))
+                with self.assertRaises(ValueError):
+                    live.public_url(url)
+            resolver.assert_not_called()
+
+    def test_redirectors_not_candidates(self):
+        self.assertFalse(live.candidate_allowed('http://example.com/api.php?id=1'))
+        self.assertFalse(live.candidate_allowed('https://example.com/shortlink'))
+        self.assertTrue(live.candidate_allowed('https://example.com/live.m3u8'))
+
+    def test_redirect_to_quarantined_host_blocked(self):
+        with self.assertRaises(ValueError):
+            live.SafeRedirect().redirect_request(None, None, 302, '', {}, 'http://kkk.jjjj.jiduo.me/a.m3u8')
+
     def test_normalization(self):
         self.assertEqual(live.channel_name(' CCTV-5+ 高清'), 'CCTV5+')
         self.assertEqual(live.channel_name('翡翠台'), 'TVB翡翠台')
