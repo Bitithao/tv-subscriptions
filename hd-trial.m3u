@@ -1,0 +1,3 @@
+#EXTM3U
+#EXTINF:-1 group-title="直连试播",翡翠台1080p
+http://218.13.139.26:9901/tsfile/live/1079_1.m3u8
