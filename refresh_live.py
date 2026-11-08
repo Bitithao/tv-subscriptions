@@ -8,6 +8,7 @@ import socket
 import time
 import urllib.request
 from collections import defaultdict
+from bisect import bisect_right
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urljoin, urlsplit
@@ -20,6 +21,7 @@ BASE = "https://raw.githubusercontent.com/Bitithao/tv-subscriptions/main/"
 PRIORITY = ["TVB翡翠台", "广东卫视", "深圳卫视", "浙江卫视", "大湾区卫视", "广东珠江", "凤凰中文", "凤凰资讯"]
 TIMEOUT = 5
 MAX_PER_CHANNEL = 30
+CN_RANGES = "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt"
 # Public CCSH direct routes; the first was verified on the TCL television.
 # These are preferences only: each must pass the same live-segment probe on every run.
 PREFERRED = {
@@ -52,7 +54,7 @@ def fetch(url, limit=1_000_000):
     public_url(url)
     # No explicit HTTP proxy; the desktop may still have an operating-system TUN.
     opener = urllib.request.build_opener(urllib.request.ProxyHandler({}), SafeRedirect())
-    request = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0", "Range": f"bytes=0-{limit-1}"})
+    request = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0", "Cache-Control": "no-cache", "Range": f"bytes=0-{limit-1}"})
     with opener.open(request, timeout=TIMEOUT) as response:
         return response.read(limit), response.geturl()
 
@@ -116,6 +118,16 @@ def probe(item):
             segment, _ = fetch(urljoin(effective, refs[-1]), 262_144)
             if len(segment) < 8192 or not media_signature(segment):
                 raise ValueError("No recognized video media")
+            target = re.search(r"#EXT-X-TARGETDURATION:(\d+)", text)
+            time.sleep(min(12, max(3, int(target.group(1)) + 1 if target else 8)))
+            advanced, _ = fetch(effective, 512_000)
+            advanced_text = advanced.decode("utf-8-sig", "replace")
+            latest = [x.strip() for x in advanced_text.splitlines() if x.strip() and not x.startswith("#")]
+            if not advanced_text.startswith("#EXTM3U") or not latest or latest[-1] == refs[-1]:
+                raise ValueError("Live playlist did not advance")
+            next_segment, _ = fetch(urljoin(effective, latest[-1]), 262_144)
+            if len(next_segment) < 8192 or not media_signature(next_segment):
+                raise ValueError("Next live segment failed")
             return dict(item, checked_at=time.time(), probe_ms=round((time.monotonic() - start) * 1000)), None
         raise ValueError("Playlist nesting limit")
     except Exception as exc:
@@ -159,6 +171,22 @@ def refresh():
     for item in old:
         candidates[item["name"]].append(item)
     source_errors = []
+    cn_starts, cn_ends = [], []
+    try:
+        raw_cn, _ = fetch(CN_RANGES, 2_000_000)
+        matches = re.findall(rb"\d+\.\d+\.\d+\.\d+/\d+", raw_cn)
+        nets = sorted(ipaddress.collapse_addresses(ipaddress.ip_network(x.decode()) for x in matches))
+        cn_starts = [int(n.network_address) for n in nets]
+        cn_ends = [int(n.broadcast_address) for n in nets]
+    except Exception as exc:
+        source_errors.append({"source": "CN routing preference", "error": type(exc).__name__})
+    def domestic(url):
+        try:
+            address = int(ipaddress.IPv4Address(urlsplit(url).hostname))
+            index = bisect_right(cn_starts, address) - 1
+            return index >= 0 and address <= cn_ends[index]
+        except ValueError:
+            return False
     fetched = 0
     for label, url in UPSTREAMS.items():
         try:
@@ -173,7 +201,7 @@ def refresh():
     def check_channel(pair):
         name, items = pair
         preferred = PREFERRED.get(name, [])
-        items = sorted(items, key=lambda item: preferred.index(item["url"]) if item["url"] in preferred else len(preferred))
+        items = sorted(items, key=lambda item: (preferred.index(item["url"]) if item["url"] in preferred else len(preferred), not domestic(item["url"])))
         seen, good, failed = set(), [], 0
         for item in items:
             if item["url"] in seen:
@@ -188,6 +216,7 @@ def refresh():
                     break
             else:
                 failed += 1
+        print(f"{name}: {len(good)} live routes; {failed} failed probes", flush=True)
         return name, good, failed
     with concurrent.futures.ThreadPoolExecutor(max_workers=16) as pool:
         checked = list(pool.map(check_channel, sorted(candidates.items(), key=lambda x: rank(x[0]))))
