@@ -4,6 +4,24 @@ import refresh_live as live
 
 
 class ValidationTests(unittest.TestCase):
+    def test_all_redirects_rejected(self):
+        with self.assertRaises(ValueError):
+            live.SafeRedirect().redirect_request(None, None, 302, '', {}, 'https://example.com/video.m3u8')
+
+    def test_unapproved_origin_or_channel_not_selected(self):
+        allowed = {'CCTV1':['https://example.com:443']}
+        self.assertTrue(live.approved_candidate({'name':'CCTV1','url':'https://example.com/a.m3u8'},allowed))
+        self.assertFalse(live.approved_candidate({'name':'CCTV1','url':'https://unknown.example/a.m3u8'},allowed))
+        self.assertFalse(live.approved_candidate({'name':'CCTV2','url':'https://example.com/a.m3u8'},allowed))
+
+    def test_off_origin_segment_not_requested(self):
+        body = b'#EXTM3U\n#EXTINF:6,\nhttps://unknown.example/a.ts\n'
+        with patch.object(live, 'fetch', return_value=(body, 'https://example.com/live.m3u8')) as get:
+            result, error = live.probe({'url':'https://example.com/live.m3u8','name':'CCTV1'})
+        self.assertIsNone(result)
+        self.assertEqual(error,'ValueError')
+        self.assertEqual(get.call_count,1)
+
     def test_quarantined_hosts_never_resolve(self):
         with patch.object(live.socket, 'getaddrinfo') as resolver:
             for url in ['http://kkk.jjjj.jiduo.me/a.m3u8', 'https://r.jdshipin.com/a.m3u8']:
