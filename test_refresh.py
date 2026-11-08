@@ -4,7 +4,21 @@ import refresh_live as live
 
 
 class ValidationTests(unittest.TestCase):
-    def test_all_redirects_rejected(self):
+    def test_reviewed_redirect_keeps_media_query(self):
+        source='http://74.91.26.218:82/live/gdwshd.m3u8'
+        target='http://142.54.179.26:81/live/gdws.m3u8?key=test&tm=123'
+        with patch.object(live, 'public_url') as validate:
+            request=live.SafeRedirect().redirect_request(live.urllib.request.Request(source),None,302,'',{},target)
+        self.assertEqual(request.full_url,target)
+        validate.assert_called_once_with(target)
+
+    def test_reviewed_origin_does_not_allow_html_redirect(self):
+        with patch.object(live, 'public_url') as validate:
+            with self.assertRaises(ValueError):
+                live.SafeRedirect().redirect_request(live.urllib.request.Request('http://74.91.26.218:82/a.m3u8'),None,302,'',{},'http://142.54.179.26:81/expired.html')
+        validate.assert_not_called()
+
+    def test_unreviewed_redirect_rejected(self):
         with self.assertRaises(ValueError):
             live.SafeRedirect().redirect_request(None, None, 302, '', {}, 'https://example.com/video.m3u8')
 
@@ -19,7 +33,7 @@ class ValidationTests(unittest.TestCase):
         with patch.object(live, 'fetch', return_value=(body, 'https://example.com/live.m3u8')) as get:
             result, error = live.probe({'url':'https://example.com/live.m3u8','name':'CCTV1'})
         self.assertIsNone(result)
-        self.assertEqual(error,'ValueError')
+        self.assertTrue(error.startswith('ValueError'))
         self.assertEqual(get.call_count,1)
 
     def test_quarantined_hosts_never_resolve(self):
@@ -52,7 +66,7 @@ class ValidationTests(unittest.TestCase):
         with patch.object(live, 'fetch', return_value=(b'<html>denied</html>', 'https://example.com')):
             result, error = live.probe({'url': 'https://example.com', 'name': 'CCTV1'})
         self.assertIsNone(result)
-        self.assertEqual(error, 'ValueError')
+        self.assertTrue(error.startswith('ValueError'))
 
     def test_playlist_requires_real_segment(self):
         body = b'#EXTM3U\n#EXTINF:6,\na.ts\n'
@@ -76,7 +90,7 @@ class ValidationTests(unittest.TestCase):
         with patch.object(live.time, 'sleep'), patch.object(live, 'fetch', side_effect=[(body, 'https://example.com/list.m3u8'), (segment, 'https://example.com/a.ts'), (body, 'https://example.com/list.m3u8')]):
             result, error = live.probe({'name': 'CCTV1', 'url': 'https://example.com/list.m3u8'})
         self.assertIsNone(result)
-        self.assertEqual(error, 'ValueError')
+        self.assertTrue(error.startswith('ValueError'))
 
     def test_private_address_rejected(self):
         with patch.object(live.socket, 'getaddrinfo', return_value=[(2, 1, 6, '', ('127.0.0.1', 80))]):
