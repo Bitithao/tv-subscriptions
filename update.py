@@ -3,15 +3,18 @@ import json
 import time
 import urllib.request
 from pathlib import Path
+from refresh_live import refresh
 
 ALPHABET = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz"
 SOURCE = "https://raw.githubusercontent.com/hafrey1/LunaTV-config/main/jin18.txt"
+
 
 def decode58(text):
     value = 0
     for char in text.strip():
         value = value * 58 + ALPHABET.index(char)
     return value.to_bytes((value.bit_length() + 7) // 8, "big")
+
 
 def encode58(data):
     number = int.from_bytes(data, "big")
@@ -20,6 +23,7 @@ def encode58(data):
         number, remainder = divmod(number, 58)
         result = ALPHABET[remainder] + result
     return result
+
 
 def main():
     for attempt in range(3):
@@ -37,10 +41,10 @@ def main():
             if attempt == 2:
                 raise
             time.sleep(3)
-    payload = {"api_site": sites, "lives": {
-        "ccsh": {"name": "CCSH TVB / 地方卫视", "url": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/live.m3u", "from": "https://github.com/CCSH/IPTV"},
-        "vbskycn": {"name": "vbskycn 国内卫视", "url": "https://raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv4.m3u", "from": "https://github.com/vbskycn/iptv"}
-    }}
+    payload = {
+        "api_site": sites,
+        "lives": refresh(),
+    }
     compact = json.dumps(payload, ensure_ascii=False, separators=(",", ":")).encode()
     encoded = encode58(compact)
     assert decode58(encoded) == compact
@@ -48,6 +52,7 @@ def main():
     Path("selene.json").write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     Path("selene.txt").write_text(encoded + "\n", encoding="utf-8")
     print(f"Validated {len(sites)} VOD sources and {len(payload['lives'])} live lists")
+
 
 if __name__ == "__main__":
     main()
