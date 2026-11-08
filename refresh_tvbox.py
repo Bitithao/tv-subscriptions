@@ -1,12 +1,14 @@
 """Recheck the exact household-tested live routes on the existing two-day job."""
 
 import json
+import re
+import urllib.error
 import urllib.request
 from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 from pathlib import Path
-from urllib.parse import urlencode, urljoin, urlsplit
+from urllib.parse import quote, urlencode, urljoin, urlsplit
 
 from refresh_live import approved_candidate, candidate_allowed, fetch, media_signature, origin, playlist, probe, public_url
 
@@ -18,33 +20,48 @@ BACKUP = "tvbox-backup.m3u"
 
 
 def sample_vod_media(entry):
-    """Check one bounded representative HLS segment from a catalogue match."""
+    """Read a bounded media sample from the same episode used in the household tests."""
     groups = str(entry.get("vod_play_url") or "").replace("$$$", "#").split("#")
+    candidates = []
     for item in groups:
-        link = item.partition("$")[-1] if "$" in item else item
-        if not candidate_allowed(link):
-            continue
+        label, separator, link = item.partition("$")
+        if separator and re.fullmatch(r"(?:第\s*|EP\s*)?0*1180(?:\s*[集话話])?", label.strip(), re.IGNORECASE) and candidate_allowed(link):
+            candidates.append(link)
+    result = {"ok": False, "reason": "no_direct_hls_for_episode"}
+    for link in list(dict.fromkeys(candidates))[:3]:
         try:
             for _ in range(3):
-                data, effective = fetch(link, 500_000)
+                data, effective = fetch(quote(link, safe=":/?=&%+#[]@!$'()*;,~"), 500_000)
                 text = data.decode("utf-8-sig")
-                if not text.startswith("#EXTM3U") or "#EXT-X-KEY:" in text:
-                    return {"ok": False, "reason": "manifest_unverified"}
+                if not text.startswith("#EXTM3U"):
+                    result = {"ok": False, "reason": "not_hls"}
+                    break
+                if re.search(r"^#EXT-X-KEY:.*METHOD=(?!NONE(?:,|$))", text, re.MULTILINE):
+                    result = {"ok": False, "reason": "encrypted_hls"}
+                    break
                 refs = [x.strip() for x in text.splitlines() if x.strip() and not x.startswith("#")]
                 if not refs:
-                    return {"ok": False, "reason": "no_segments"}
-                target = urljoin(effective, refs[0])
+                    result = {"ok": False, "reason": "no_segments"}
+                    break
+                media = "#EXTINF:" in text
+                target = urljoin(effective, refs[len(refs) // 2] if media else refs[0])
                 if origin(target) != origin(effective):
-                    return {"ok": False, "reason": "off_origin_reference"}
-                if "#EXTINF:" in text:
-                    segment, _ = fetch(target, 262_144)
-                    ok = len(segment) >= 8192 and media_signature(segment)
-                    return {"ok": ok, "reason": "segment_read" if ok else "unrecognized_media"}
+                    result = {"ok": False, "reason": "off_origin_reference"}
+                    break
+                if media:
+                    segment, _ = fetch(quote(target, safe=":/?=&%+#[]@!$'()*;,~"), 262_144)
+                    if len(segment) >= 8192 and media_signature(segment):
+                        return {"ok": True, "reason": "segment_read", "episode": 1180}
+                    result = {"ok": False, "reason": "unrecognized_media"}
+                    break
                 link = target
-            return {"ok": False, "reason": "playlist_depth"}
+            else:
+                result = {"ok": False, "reason": "playlist_depth"}
+        except urllib.error.HTTPError as exc:
+            result = {"ok": False, "reason": f"http_{exc.code}"}
         except Exception as exc:
-            return {"ok": False, "reason": type(exc).__name__}
-    return {"ok": False, "reason": "no_direct_hls"}
+            result = {"ok": False, "reason": type(exc).__name__}
+    return result
 
 
 class NoRedirect(urllib.request.HTTPRedirectHandler):
