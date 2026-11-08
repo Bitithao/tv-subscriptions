@@ -27,12 +27,21 @@ class ValidationTests(unittest.TestCase):
 
     def test_live_ts_and_relative_url(self):
         body = b'#EXTM3U\n#EXTINF:6,\nsegments/a.ts\n'
+        body2 = b'#EXTM3U\n#EXTINF:6,\nsegments/b.ts\n'
         segment = (b'\x47' + bytes(187)) * 100
-        with patch.object(live, 'fetch', side_effect=[(body, 'https://example.com/ch/list.m3u8'), (segment, 'https://example.com/ch/segments/a.ts')]) as get:
+        with patch.object(live.time, 'sleep'), patch.object(live, 'fetch', side_effect=[(body, 'https://example.com/ch/list.m3u8'), (segment, 'https://example.com/ch/segments/a.ts'), (body2, 'https://example.com/ch/list.m3u8'), (segment, 'https://example.com/ch/segments/b.ts')]) as get:
             result, error = live.probe({'url': 'https://example.com/ch/list.m3u8', 'name': 'CCTV1'})
         self.assertIsNone(error)
         self.assertEqual(result['name'], 'CCTV1')
-        self.assertEqual(get.call_args.args[0], 'https://example.com/ch/segments/a.ts')
+        self.assertEqual(get.call_args.args[0], 'https://example.com/ch/segments/b.ts')
+
+    def test_stalled_live_playlist_rejected(self):
+        body = b'#EXTM3U\n#EXTINF:6,\na.ts\n'
+        segment = (b'\x47' + bytes(187)) * 100
+        with patch.object(live.time, 'sleep'), patch.object(live, 'fetch', side_effect=[(body, 'https://example.com/list.m3u8'), (segment, 'https://example.com/a.ts'), (body, 'https://example.com/list.m3u8')]):
+            result, error = live.probe({'name': 'CCTV1', 'url': 'https://example.com/list.m3u8'})
+        self.assertIsNone(result)
+        self.assertEqual(error, 'ValueError')
 
     def test_private_address_rejected(self):
         with patch.object(live.socket, 'getaddrinfo', return_value=[(2, 1, 6, '', ('127.0.0.1', 80))]):
