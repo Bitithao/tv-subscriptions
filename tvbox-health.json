@@ -1,0 +1,66 @@
+{
+  "checked_at": "2026-11-08T15:11:18.803332+00:00",
+  "vod": {
+    "youzhi": {
+      "catalogue_ok": true,
+      "sample": {
+        "ok": false,
+        "reason": "HTTPError"
+      }
+    },
+    "modu": {
+      "catalogue_ok": true,
+      "sample": {
+        "ok": false,
+        "reason": "manifest_unverified"
+      }
+    },
+    "baofeng": {
+      "catalogue_ok": true,
+      "sample": {
+        "ok": false,
+        "reason": "UnicodeEncodeError"
+      }
+    },
+    "liangzi": {
+      "catalogue_ok": true,
+      "sample": {
+        "ok": false,
+        "reason": "HTTPError"
+      }
+    },
+    "feifan": {
+      "catalogue_ok": true,
+      "sample": {
+        "ok": false,
+        "reason": "HTTPError"
+      }
+    },
+    "ruyi": {
+      "catalogue_ok": true,
+      "sample": {
+        "ok": true,
+        "reason": "segment_read"
+      }
+    },
+    "huya": {
+      "catalogue_ok": true,
+      "sample": {
+        "ok": false,
+        "reason": "manifest_unverified"
+      }
+    }
+  },
+  "live": {
+    "routes_checked": 101,
+    "expected_channels": 60,
+    "passing_primary": 58,
+    "passing_backup": 37,
+    "unavailable_channels": [
+      "云南卫视",
+      "北京卫视"
+    ],
+    "published": true,
+    "retained_previous": false
+  }
+}
