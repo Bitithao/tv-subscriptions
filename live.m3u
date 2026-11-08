@@ -1,4 +1,6 @@
 #EXTM3U
+#EXTINF:-1 tvg-name="TVB翡翠台" tvg-logo="" group-title="港澳",TVB翡翠台
+http://218.13.139.26:9901/tsfile/live/1079_1.m3u8
 #EXTINF:-1 tvg-name="广东卫视" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/广东卫视.png" group-title="广东地方",广东卫视
 http://74.91.26.218:82/live/gdwshd.m3u8
 #EXTINF:-1 tvg-name="深圳卫视" tvg-logo="https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/深圳卫视.png" group-title="广东地方",深圳卫视
