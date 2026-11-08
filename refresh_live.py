@@ -7,7 +7,7 @@ import re
 import socket
 import time
 import urllib.request
-from collections import defaultdict
+from collections import defaultdict, Counter
 from bisect import bisect_right
 from datetime import datetime, timezone
 from pathlib import Path
@@ -23,6 +23,12 @@ TIMEOUT = 5
 MAX_PER_CHANNEL = 8
 CN_RANGES = "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt"
 BLOCKED_HOSTS = ("jiduo.me", "jdshipin.com")
+# Exact origin pairs observed in response headers; this is not a global redirect allowance.
+REDIRECT_TARGETS = {
+    'http://74.91.26.218:82': {'http://142.54.179.26:81'},
+    'http://173.208.212.130:8181': {'http://208.110.86.66:82'},
+    'http://198.204.228.26:80': {'http://208.110.86.66:82'},
+}
 
 
 def blocked_host(host):
@@ -48,7 +54,12 @@ PREFERRED = {
     "TVB翡翠台": [
         "http://218.13.139.26:9901/tsfile/live/1079_1.m3u8",
         "http://183.239.108.37:1698/hls/92/index.m3u8",
-    ]
+    ],
+    "广东卫视": [
+        "http://58.56.162.102:4466/newlive/live/hls/25/live.m3u8",
+        "http://183.11.239.36:808/hls/80/index.m3u8",
+    ],
+    "深圳卫视": ["http://61.136.172.236:9901/tsfile/live/0126_1.m3u8"],
 }
 
 
@@ -67,8 +78,18 @@ def public_url(url):
 
 
 class SafeRedirect(urllib.request.HTTPRedirectHandler):
+    max_redirections = 3
+    max_repeats = 1
+
     def redirect_request(self, req, fp, code, msg, headers, newurl):
-        raise ValueError("HTTP redirects are not allowed")
+        if req is None or origin(newurl) not in REDIRECT_TARGETS.get(origin(req.full_url), set()):
+            raise ValueError("Unreviewed redirect destination")
+        if urlsplit(req.full_url).scheme == 'https' and urlsplit(newurl).scheme != 'https':
+            raise ValueError("HTTPS downgrade rejected")
+        if not urlsplit(newurl).path.lower().endswith(('.m3u8', '.ts', '.m4s', '.mp4', '.aac')):
+            raise ValueError("Non-media redirect rejected")
+        public_url(newurl)
+        return super().redirect_request(req, fp, code, msg, headers, newurl)
 
 
 def fetch(url, limit=1_000_000):
@@ -124,12 +145,16 @@ def probe(item):
     try:
         url = item["url"]
         initial_origin = origin(url)
+        media_origins = {initial_origin} | REDIRECT_TARGETS.get(initial_origin, set())
         if not candidate_allowed(url):
             raise ValueError("Not a direct M3U8 candidate")
         def same_origin_fetch(target, limit):
-            if origin(target) != initial_origin:
+            if origin(target) not in media_origins:
                 raise ValueError("Off-origin media reference rejected")
-            return fetch(target, limit)
+            data, effective = fetch(target, limit)
+            if origin(effective) not in media_origins:
+                raise ValueError("Unreviewed effective media origin")
+            return data, effective
         for _ in range(4):
             body, effective = same_origin_fetch(url, 512_000)
             text = body.decode("utf-8-sig", "replace")
@@ -145,7 +170,7 @@ def probe(item):
             if re.search(r"#EXT-X-KEY:.*METHOD=(?!NONE)", text):
                 raise ValueError("Encrypted media not validated")
             # Test an actual recent video segment, not just an HTTP 200 playlist.
-            if any(origin(urljoin(effective, ref)) != initial_origin for ref in refs):
+            if any(origin(urljoin(effective, ref)) not in media_origins for ref in refs):
                 raise ValueError("Off-origin media reference rejected")
             segment, _ = same_origin_fetch(urljoin(effective, refs[-1]), 262_144)
             if len(segment) < 8192 or not media_signature(segment):
@@ -157,7 +182,7 @@ def probe(item):
             latest = [x.strip() for x in advanced_text.splitlines() if x.strip() and not x.startswith("#")]
             if not advanced_text.startswith("#EXTM3U") or not latest or latest[-1] == refs[-1]:
                 raise ValueError("Live playlist did not advance")
-            if any(origin(urljoin(effective, ref)) != initial_origin for ref in latest):
+            if any(origin(urljoin(effective, ref)) not in media_origins for ref in latest):
                 raise ValueError("Off-origin media reference rejected")
             next_segment, _ = same_origin_fetch(urljoin(effective, latest[-1]), 262_144)
             if len(next_segment) < 8192 or not media_signature(next_segment):
@@ -165,7 +190,8 @@ def probe(item):
             return dict(item, checked_at=time.time(), probe_ms=round((time.monotonic() - start) * 1000)), None
         raise ValueError("Playlist nesting limit")
     except Exception as exc:
-        return None, type(exc).__name__
+        detail = str(exc) if isinstance(exc, ValueError) else str(getattr(exc, 'code', ''))
+        return None, type(exc).__name__ + (': ' + detail if detail else '')
 
 
 def rank(name):
@@ -248,6 +274,7 @@ def refresh():
         preferred = PREFERRED.get(name, [])
         items = sorted(items, key=lambda item: (preferred.index(item["url"]) if item["url"] in preferred else len(preferred), not domestic(item["url"])))
         seen, good, failed = set(), [], 0
+        reasons = Counter()
         for item in items:
             if not approved_candidate(item, allowed):
                 continue
@@ -263,12 +290,13 @@ def refresh():
                     break
             else:
                 failed += 1
+                reasons[error] += 1
         print(f"{name}: {len(good)} live routes; {failed} failed probes", flush=True)
-        return name, good, failed
+        return name, good, failed, dict(reasons)
     with concurrent.futures.ThreadPoolExecutor(max_workers=6) as pool:
         checked = list(pool.map(check_channel, sorted(candidates.items(), key=lambda x: rank(x[0]))))
     primary, backup = [], []
-    for name, good, _ in checked:
+    for name, good, _, _ in checked:
         if good:
             primary.append(good[0])
         if len(good) > 1:
@@ -279,8 +307,9 @@ def refresh():
     report = {"checked_at_utc": datetime.now(timezone.utc).isoformat(), "location": "GitHub hosted runner" if os.environ.get('GITHUB_ACTIONS') else "household PC with its existing network routing",
               "published": healthy, "candidates": fetched, "unapproved_candidates_not_requested": ignored, "channels_passed": len(primary), "backup_channels": len(backup),
               "failed_probes": sum(x[2] for x in checked), "source_errors": source_errors,
-              "missing_channels": [name for name, good, _ in checked if not good],
-              "note": "Only selected per-channel origins are requested; no redirects or off-origin media. Checks two advancing video segments. Cloud reachability does not guarantee home playback or source safety; failed publication keeps the last playlist."}
+              "missing_channels": [name for name, good, _, _ in checked if not good],
+              "failure_reasons": {name: reasons for name, _, _, reasons in checked if reasons},
+              "note": "Only selected per-channel origins and exact reviewed CDN redirect pairs are requested. No unreviewed off-origin media. Checks two advancing video segments. Cloud reachability does not guarantee home playback or source safety; failed publication keeps the last playlist."}
     Path("health.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     if healthy:
         Path("live.m3u").write_text(playlist(primary), encoding="utf-8")
