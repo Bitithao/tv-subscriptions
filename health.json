@@ -1,254 +1,62 @@
 {
-  "checked_at_utc": "2026-11-08T04:39:12.860794+00:00",
+  "checked_at_utc": "2026-11-08T04:51:16.504174+00:00",
   "location": "GitHub hosted runner",
   "published": true,
   "candidates": 155,
   "unapproved_candidates_not_requested": 729,
-  "channels_passed": 12,
-  "backup_channels": 7,
-  "failed_probes": 123,
+  "channels_passed": 65,
+  "backup_channels": 53,
+  "failed_probes": 21,
   "source_errors": [],
   "missing_channels": [
-    "浙江卫视",
-    "大湾区卫视",
-    "广东珠江",
-    "凤凰中文",
-    "CCTV1",
-    "CCTV2",
-    "CCTV3",
-    "CCTV4",
-    "CCTV5",
-    "CCTV6",
-    "CCTV7",
-    "CCTV8",
-    "CCTV9",
-    "CCTV10",
-    "CCTV11",
-    "CCTV12",
-    "CCTV13",
     "CCTV14",
     "CCTV15",
-    "CCTV16",
-    "CCTV17",
-    "三沙卫视",
-    "东南卫视",
-    "东方卫视",
-    "云南卫视",
-    "兵团卫视",
-    "内蒙古卫视",
-    "北京卫视",
-    "厦门卫视",
-    "吉林卫视",
-    "四川卫视",
-    "天津卫视",
-    "宁夏卫视",
-    "安徽卫视",
-    "山东卫视",
-    "山西卫视",
     "广东体育",
-    "广东新闻",
-    "广东民生",
-    "广西卫视",
-    "延边卫视",
-    "新疆卫视",
-    "江苏卫视",
-    "江西卫视",
-    "河北卫视",
-    "河南卫视",
-    "湖北卫视",
-    "湖南卫视",
-    "甘肃卫视",
-    "西藏卫视",
-    "贵州卫视",
-    "辽宁卫视",
-    "重庆卫视",
-    "陕西卫视",
-    "青海卫视",
-    "香港卫视",
-    "黑龙江卫视"
+    "海南卫视"
   ],
   "failure_reasons": {
-    "深圳卫视": {
+    "广东卫视": {
       "TimeoutError": 1
     },
-    "浙江卫视": {
-      "ValueError: Unreviewed redirect destination": 2
-    },
-    "大湾区卫视": {
-      "ValueError: Unreviewed redirect destination": 2
-    },
-    "广东珠江": {
-      "ValueError: Unreviewed redirect destination": 2
-    },
-    "凤凰中文": {
-      "ValueError: Unreviewed redirect destination": 2
-    },
-    "CCTV1": {
-      "ValueError: Unreviewed redirect destination": 2
-    },
-    "CCTV2": {
-      "ValueError: Unreviewed redirect destination": 2
-    },
-    "CCTV3": {
-      "ValueError: Unreviewed redirect destination": 3
-    },
-    "CCTV4": {
-      "ValueError: Unreviewed redirect destination": 3
+    "深圳卫视": {
+      "TimeoutError": 2
     },
     "CCTV5": {
-      "ValueError: Unreviewed redirect destination": 2,
       "ValueError: HTML or script response rejected before reading body": 3
     },
-    "CCTV5+": {
-      "ValueError: Unreviewed redirect destination": 1
-    },
-    "CCTV6": {
-      "ValueError: Unreviewed redirect destination": 3
-    },
-    "CCTV7": {
-      "ValueError: Unreviewed redirect destination": 2
-    },
-    "CCTV8": {
-      "ValueError: Unreviewed redirect destination": 3
-    },
-    "CCTV9": {
-      "ValueError: Unreviewed redirect destination": 2
-    },
-    "CCTV10": {
-      "ValueError: Unreviewed redirect destination": 2
-    },
     "CCTV11": {
-      "ValueError: Unreviewed redirect destination": 2
-    },
-    "CCTV12": {
-      "ValueError: Unreviewed redirect destination": 2
-    },
-    "CCTV13": {
-      "ValueError: Unreviewed redirect destination": 1
-    },
-    "CCTV14": {
-      "ValueError: Unreviewed redirect destination": 2
-    },
-    "CCTV15": {
-      "ValueError: Unreviewed redirect destination": 3
-    },
-    "CCTV16": {
-      "ValueError: Unreviewed redirect destination": 3
-    },
-    "CCTV17": {
-      "ValueError: Unreviewed redirect destination": 2
-    },
-    "三沙卫视": {
-      "ValueError: Unreviewed redirect destination": 2
-    },
-    "东南卫视": {
-      "ValueError: Unreviewed redirect destination": 2
-    },
-    "东方卫视": {
-      "ValueError: Unreviewed redirect destination": 2
-    },
-    "云南卫视": {
-      "ValueError: Unreviewed redirect destination": 2
-    },
-    "兵团卫视": {
-      "ValueError: Unreviewed redirect destination": 2
-    },
-    "内蒙古卫视": {
-      "ValueError: Unreviewed redirect destination": 2
-    },
-    "北京卫视": {
-      "ValueError: Off-origin media reference rejected": 1,
-      "ValueError: Unreviewed redirect destination": 1
-    },
-    "厦门卫视": {
-      "ValueError: Unreviewed redirect destination": 2
-    },
-    "吉林卫视": {
-      "ValueError: Unreviewed redirect destination": 2
-    },
-    "四川卫视": {
-      "ValueError: Unreviewed redirect destination": 2
-    },
-    "天津卫视": {
-      "ValueError: Unreviewed redirect destination": 2
-    },
-    "宁夏卫视": {
-      "ValueError: Unreviewed redirect destination": 2
-    },
-    "安徽卫视": {
-      "ValueError: Unreviewed redirect destination": 2
-    },
-    "山东卫视": {
-      "ValueError: Unreviewed redirect destination": 2
-    },
-    "山西卫视": {
-      "ValueError: Unreviewed redirect destination": 2
-    },
-    "广东体育": {
-      "ValueError: Unreviewed redirect destination": 2
-    },
-    "广东新闻": {
-      "ValueError: Unreviewed redirect destination": 2
-    },
-    "广东民生": {
-      "ValueError: Unreviewed redirect destination": 2
-    },
-    "广西卫视": {
-      "ValueError: Unreviewed redirect destination": 2
-    },
-    "延边卫视": {
-      "ValueError: Live playlist did not advance": 1,
       "URLError": 1
     },
-    "新疆卫视": {
-      "ValueError: Unreviewed redirect destination": 2
+    "CCTV14": {
+      "URLError": 2
     },
-    "江苏卫视": {
-      "ValueError: Unreviewed redirect destination": 2
+    "CCTV15": {
+      "URLError": 3
     },
-    "江西卫视": {
-      "ValueError: Unreviewed redirect destination": 2
+    "北京卫视": {
+      "ValueError: Off-origin media reference rejected": 1
     },
-    "河北卫视": {
-      "ValueError: Unreviewed redirect destination": 2
+    "广东体育": {
+      "HTTPError: 404": 2
     },
-    "河南卫视": {
-      "ValueError: Unreviewed redirect destination": 2
+    "延边卫视": {
+      "ValueError: Live playlist did not advance": 1
     },
-    "湖北卫视": {
-      "ValueError: Unreviewed redirect destination": 2
+    "海南卫视": {
+      "TimeoutError": 1
     },
     "湖南卫视": {
-      "ValueError: Off-origin media reference rejected": 1,
-      "ValueError: Unreviewed redirect destination": 1
+      "ValueError: Off-origin media reference rejected": 1
     },
     "甘肃卫视": {
-      "ValueError: Unreviewed redirect destination": 2
-    },
-    "西藏卫视": {
-      "ValueError: Unreviewed redirect destination": 2
-    },
-    "贵州卫视": {
-      "ValueError: Unreviewed redirect destination": 2
-    },
-    "辽宁卫视": {
-      "ValueError: Unreviewed redirect destination": 2
+      "ValueError: Live playlist did not advance": 1
     },
     "重庆卫视": {
-      "ValueError: Unreviewed redirect destination": 2
-    },
-    "陕西卫视": {
-      "ValueError: Unreviewed redirect destination": 2
-    },
-    "青海卫视": {
-      "ValueError: Unreviewed redirect destination": 2
-    },
-    "香港卫视": {
-      "ValueError: Unreviewed redirect destination": 1
+      "ValueError: Live playlist did not advance": 1
     },
     "黑龙江卫视": {
-      "ValueError: Unreviewed redirect destination": 2
+      "ValueError: Media redirect limit exceeded": 1
     }
   },
-  "note": "Only selected per-channel origins and exact reviewed CDN redirect pairs are requested. No unreviewed off-origin media. Checks two advancing video segments. Cloud reachability does not guarantee home playback or source safety; failed publication keeps the last playlist."
+  "note": "Only selected per-channel entry origins are probed. Public M3U8 redirects are bounded and checked without reading redirect-page bodies; blocked hosts and private addresses are rejected. Media must remain on the selected or resolved playlist origin. Two advancing segments are checked. This is not a safety certification or guarantee of home playback."
 }
