@@ -142,15 +142,15 @@
     }
   },
   "lives": {
-    "ccsh": {
-      "name": "CCSH TVB / 地方卫视",
-      "url": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/live.m3u",
-      "from": "https://github.com/CCSH/IPTV"
+    "verified": {
+      "name": "精选直播（去重主线）",
+      "url": "https://raw.githubusercontent.com/Bitithao/tv-subscriptions/main/live.m3u",
+      "from": "https://github.com/Bitithao/tv-subscriptions"
     },
-    "vbskycn": {
-      "name": "vbskycn 国内卫视",
-      "url": "https://raw.githubusercontent.com/vbskycn/iptv/refs/heads/master/tv/iptv4.m3u",
-      "from": "https://github.com/vbskycn/iptv"
+    "backup": {
+      "name": "直播备用（每台一条）",
+      "url": "https://raw.githubusercontent.com/Bitithao/tv-subscriptions/main/backup.m3u",
+      "from": "https://github.com/Bitithao/tv-subscriptions"
     }
   }
 }

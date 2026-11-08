@@ -1,0 +1,17 @@
+{
+  "checked_at_utc": "2026-11-08T03:31:17.212979+00:00",
+  "location": "GitHub hosted runner",
+  "published": true,
+  "candidates": 1453,
+  "channels_passed": 72,
+  "backup_channels": 70,
+  "failed_probes": 220,
+  "source_errors": [],
+  "missing_channels": [
+    "内蒙古蒙语卫视",
+    "康巴卫视",
+    "星空卫视",
+    "陕西农林卫视"
+  ],
+  "note": "Checks playlist and a video segment. Cloud reachability is not a guarantee of home playback; failed publication keeps the last usable playlist."
+}
