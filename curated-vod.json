@@ -1,56 +1,56 @@
 {
-  "ikunzy.com": {
-    "key": "ikunzy.com",
-    "name": "01 iKun · 综合优先",
-    "api": "https://ikunzyapi.com/api.php/provide/vod",
-    "from": "https://github.com/hafrey1/LunaTV-config"
+  "www.ryzyw.com": {
+    "key": "www.ryzyw.com",
+    "api": "https://cj.rycjapi.com/api.php/provide/vod",
+    "from": "https://github.com/hafrey1/LunaTV-config",
+    "name": "01 如意 · 优先试播"
   },
   "ffzyapi.com": {
     "key": "ffzyapi.com",
-    "name": "02 非凡 · 动漫电影",
+    "name": "02 非凡 · 有插播",
     "api": "https://api.ffzyapi.com/api.php/provide/vod",
     "from": "https://github.com/hafrey1/LunaTV-config"
   },
   "zuidazy.co": {
     "key": "zuidazy.co",
-    "name": "03 最大 · 剧集备选",
+    "name": "03 最大 · 有水印",
     "api": "https://zuidazy.me/api.php/provide/vod",
     "from": "https://github.com/hafrey1/LunaTV-config"
   },
   "1080zyk4.com": {
     "key": "1080zyk4.com",
-    "name": "04 优质 · 综合补充",
+    "name": "04 优质 · 有插播",
     "api": "https://api.yzzy-api.com/inc/apijson.php",
     "from": "https://github.com/hafrey1/LunaTV-config"
   },
   "cj.lzcaiji.com": {
     "key": "cj.lzcaiji.com",
-    "name": "05 量子 · 片库补充",
+    "name": "05 量子 · 有插播",
     "api": "https://cj.lzcaiji.com/api.php/provide/vod",
     "from": "https://github.com/hafrey1/LunaTV-config"
   },
-  "360zy.com": {
-    "key": "360zy.com",
-    "name": "06 360 · 新番补充",
-    "api": "https://360zyzz.com/api.php/provide/vod",
+  "ikunzy.com": {
+    "key": "ikunzy.com",
+    "name": "06 iKun · 有插播",
+    "api": "https://ikunzyapi.com/api.php/provide/vod",
     "from": "https://github.com/hafrey1/LunaTV-config"
   },
   "caiji.moduapi.cc": {
     "key": "caiji.moduapi.cc",
-    "name": "07 魔都 · 动漫补充",
+    "name": "07 魔都 · 广告备用",
     "api": "https://caiji.moduapi.cc/api.php/provide/vod",
     "from": "https://github.com/hafrey1/LunaTV-config"
   },
   "www.huyaapi.com": {
     "key": "www.huyaapi.com",
-    "name": "08 虎牙资源 · 直链补充",
+    "name": "08 虎牙 · 水印备用",
     "api": "https://www.huyaapi.com/api.php/provide/vod/from/hym3u8",
     "from": "https://raw.githubusercontent.com/kjxhb/tvbox/main/tvbox.json"
   },
-  "taopianapi.com": {
-    "key": "taopianapi.com",
-    "name": "09 淘片 · 老片补充",
-    "api": "https://taopianapi.com/cjapi/mc/vod/json.html",
-    "from": "https://raw.githubusercontent.com/kjxhb/tvbox/main/tvbox.json"
+  "360zy.com": {
+    "key": "360zy.com",
+    "name": "09 360 · 易缓冲备用",
+    "api": "https://360zyzz.com/api.php/provide/vod",
+    "from": "https://github.com/hafrey1/LunaTV-config"
   }
 }
