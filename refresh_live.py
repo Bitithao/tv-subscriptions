@@ -11,7 +11,7 @@ from collections import defaultdict, Counter
 from bisect import bisect_right
 from datetime import datetime, timezone
 from pathlib import Path
-from urllib.parse import urljoin, urlsplit
+from urllib.parse import urljoin, urlsplit, quote
 
 UPSTREAMS = {
     "CCSH": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/live.m3u",
@@ -240,12 +240,22 @@ def group_name(name):
     return "地方卫视"
 
 
+def channel_logo(item):
+    logo = item.get("logo", "")
+    prefix = "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/"
+    if logo.startswith(prefix):
+        logo = logo.removeprefix("https://ghfast.top/")
+    if not logo and item["name"] in PREFERRED:
+        logo = "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/" + item["name"] + ".png"
+    return quote(logo, safe="/:?=&%+#").replace('"', "").replace("\n", "")
+
+
 def playlist(items):
     lines = ["#EXTM3U"]
     for item in sorted(items, key=lambda x: rank(x["name"])):
         name = item["name"]
         display_name = item.get("display_name", name).replace("\n", "")
-        logo = item.get("logo", "").replace('"', "").replace("\n", "")
+        logo = channel_logo(item)
         lines.extend([f'#EXTINF:-1 tvg-name="{name}" tvg-logo="{logo}" group-title="{group_name(name)}",{display_name}', item["url"]])
     return "\n".join(lines) + "\n"
 
