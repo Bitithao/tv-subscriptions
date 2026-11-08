@@ -129,5 +129,43 @@ class ValidationTests(unittest.TestCase):
                 live.public_url('http://example.com/a')
 
 
+class CuratedVODTests(unittest.TestCase):
+    def test_curated_list_is_small_and_retains_tested_keys(self):
+        import update
+        self.assertEqual(list(update.load_curated_sites()), ['ikunzy.com', 'ffzyapi.com', 'zuidazy.co'])
+
+    def test_unsafe_api_is_rejected(self):
+        import update, json
+        for url in ['http://example.com/api', 'https://example.com/api?url=other', 'https://x.jiduo.me/api', 'https://user:pass@example.com/api']:
+            with self.subTest(url=url), patch.object(update.Path, 'read_text', return_value=json.dumps({'x': {'name': 'test', 'api': url}})):
+                with self.assertRaises(ValueError):
+                    update.load_curated_sites()
+
+    def test_cloud_catalogue_failure_retains_source(self):
+        import update
+        with patch('refresh_live.public_url', side_effect=ValueError('offline')):
+            status = update.catalogue_health({'x': {'api': 'https://example.com/api'}})
+        self.assertFalse(status['x']['catalogue_ok'])
+        self.assertTrue(status['x']['retained'])
+
+    def test_generated_subscription_preserves_live_lists(self):
+        import update, tempfile, os, json
+        from pathlib import Path
+        sites = update.load_curated_sites()
+        lists = [{'name': 'main', 'url': 'https://example.com/live.m3u'}, {'name': 'backup', 'url': 'https://example.com/backup.m3u'}]
+        cwd = os.getcwd()
+        with tempfile.TemporaryDirectory() as tmp:
+            try:
+                os.chdir(tmp)
+                with patch.object(update, 'load_curated_sites', return_value=sites), patch.object(update, 'refresh', return_value=lists), patch.object(update, 'catalogue_health', return_value={}):
+                    update.main()
+                payload = json.loads(Path('selene.json').read_text(encoding='utf-8'))
+                self.assertEqual(payload['lives'], lists)
+                self.assertEqual(payload['api_site'], sites)
+                self.assertEqual(json.loads(update.decode58(Path('selene.txt').read_text())), payload)
+            finally:
+                os.chdir(cwd)
+
+
 if __name__ == '__main__':
     unittest.main()
