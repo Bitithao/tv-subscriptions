@@ -1,65 +1,64 @@
 {
-  "checked_at": "2026-11-08T15:11:18.803332+00:00",
+  "checked_at": "2026-11-08T15:16:33.191972+00:00",
   "vod": {
     "youzhi": {
       "catalogue_ok": true,
       "sample": {
         "ok": false,
-        "reason": "HTTPError"
+        "reason": "http_403"
       }
     },
     "modu": {
       "catalogue_ok": true,
       "sample": {
         "ok": false,
-        "reason": "manifest_unverified"
+        "reason": "off_origin_reference"
       }
     },
     "baofeng": {
       "catalogue_ok": true,
       "sample": {
-        "ok": false,
-        "reason": "UnicodeEncodeError"
+        "ok": true,
+        "reason": "segment_read",
+        "episode": 1180
       }
     },
     "liangzi": {
       "catalogue_ok": true,
       "sample": {
         "ok": false,
-        "reason": "HTTPError"
+        "reason": "http_404"
       }
     },
     "feifan": {
       "catalogue_ok": true,
       "sample": {
         "ok": false,
-        "reason": "HTTPError"
+        "reason": "http_403"
       }
     },
     "ruyi": {
       "catalogue_ok": true,
       "sample": {
         "ok": true,
-        "reason": "segment_read"
+        "reason": "segment_read",
+        "episode": 1180
       }
     },
     "huya": {
       "catalogue_ok": true,
       "sample": {
         "ok": false,
-        "reason": "manifest_unverified"
+        "reason": "encrypted_hls"
       }
     }
   },
   "live": {
     "routes_checked": 101,
     "expected_channels": 60,
-    "passing_primary": 58,
-    "passing_backup": 37,
-    "unavailable_channels": [
-      "云南卫视",
-      "北京卫视"
-    ],
+    "passing_primary": 60,
+    "passing_backup": 34,
+    "unavailable_channels": [],
     "published": true,
     "retained_previous": false
   }
