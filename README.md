@@ -3,7 +3,11 @@
 电视订阅地址保持不变：
 https://raw.githubusercontent.com/Bitithao/tv-subscriptions/main/selene.txt
 
-## 自动维护
+## 当前状态
+
+自动抓取与检测已停用，等待来源安全复核。已移除已知风险域名及非直接 M3U8 入口；此清理没有重新访问直播地址，也不代表其余来源通过安全认证。以下为恢复前的设计说明，当前不执行定时更新。
+
+## 自动维护设计（目前停用）
 
 GitHub Actions 每天北京时间 05:23、11:23、17:23、23:23 抓取 CCSH 与 vbskycn 的公开直播源。GitHub 调度可能延后，不依赖家里的电脑或服务器。
 
