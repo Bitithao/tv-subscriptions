@@ -1,9 +1,40 @@
 import unittest
 from unittest.mock import patch
+from unittest.mock import Mock
 import refresh_live as live
 
 
 class ValidationTests(unittest.TestCase):
+    def test_media_redirect_closes_page_without_reading_body(self):
+        handler=live.SafeRedirect(allow_media_redirects=True)
+        handler.parent=Mock()
+        request=live.urllib.request.Request('http://example.com/live.m3u8')
+        request.timeout=5
+        response=Mock()
+        with patch.object(live,'public_url'):
+            handler.http_error_302(request,response,302,'',{'Location':'https://cdn.example/live.m3u8?token=test'})
+        response.read.assert_not_called()
+        response.close.assert_called_once()
+        self.assertEqual(handler.parent.open.call_args.args[0].full_url,'https://cdn.example/live.m3u8?token=test')
+
+    def test_media_redirect_limit_stops_before_next_request(self):
+        handler=live.SafeRedirect(allow_media_redirects=True)
+        handler.parent=Mock()
+        request=live.urllib.request.Request('http://example.com/live.m3u8')
+        request._media_redirect_count=3
+        response=Mock()
+        with self.assertRaises(ValueError):
+            handler.http_error_302(request,response,302,'',{'Location':'https://cdn.example/live.m3u8'})
+        response.read.assert_not_called()
+        response.close.assert_called_once()
+        handler.parent.open.assert_not_called()
+
+    def test_dynamic_media_redirect_still_blocks_quarantined_host(self):
+        with patch.object(live.socket,'getaddrinfo') as resolver:
+            with self.assertRaises(ValueError):
+                live.SafeRedirect(True).redirect_request(live.urllib.request.Request('http://example.com/live.m3u8'),None,302,'',{},'https://kkk.jjjj.jiduo.me/live.m3u8')
+        resolver.assert_not_called()
+
     def test_reviewed_redirect_keeps_media_query(self):
         source='http://74.91.26.218:82/live/gdwshd.m3u8'
         target='http://142.54.179.26:81/live/gdws.m3u8?key=test&tm=123'
