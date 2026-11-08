@@ -130,9 +130,15 @@ class ValidationTests(unittest.TestCase):
 
 
 class CuratedVODTests(unittest.TestCase):
-    def test_curated_list_is_small_and_retains_tested_keys(self):
+    def test_expanded_list_preserves_primary_sources_and_distinct_apis(self):
         import update
-        self.assertEqual(list(update.load_curated_sites()), ['ikunzy.com', 'ffzyapi.com', 'zuidazy.co'])
+        sites = update.load_curated_sites()
+        self.assertGreaterEqual(len(sites), 9)
+        self.assertEqual(list(sites)[:3], ['ikunzy.com', 'ffzyapi.com', 'zuidazy.co'])
+        self.assertEqual(len({v['api'].rstrip('/') for v in sites.values()}), len(sites))
+        self.assertTrue(all(v.get('key') == k for k, v in sites.items()))
+        self.assertIn('taopianapi.com', sites)
+        self.assertIn('www.huyaapi.com', sites)
 
     def test_unsafe_api_is_rejected(self):
         import update, json
