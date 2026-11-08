@@ -1,0 +1,608 @@
+[
+  {
+    "name": "广东卫视",
+    "url": "http://74.91.26.218:82/live/gdwshd.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E5%B9%BF%E4%B8%9C%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "深圳卫视",
+    "url": "http://74.91.26.218:82/live/szwshd.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E6%B7%B1%E5%9C%B3%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "浙江卫视",
+    "url": "http://192.151.150.154/live/zjwshd.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E6%B5%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "大湾区卫视",
+    "url": "http://192.151.150.154/live/nfws.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E5%A4%A7%E6%B9%BE%E5%8C%BA%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "广东珠江",
+    "url": "http://198.204.228.26/live/gdzj.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E5%B9%BF%E4%B8%9C%E7%8F%A0%E6%B1%9F.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "凤凰中文",
+    "url": "http://173.208.234.146/live/fhzw.m3u8?zbj",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E5%87%A4%E5%87%B0%E4%B8%AD%E6%96%87.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "CCTV1",
+    "url": "http://198.204.228.26/live/cctv1hd.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV1.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "CCTV2",
+    "url": "http://173.208.234.146/live/cctv2.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV2.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "CCTV3",
+    "url": "http://74.91.26.218:82/live/cctv3hd.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV3.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "CCTV4",
+    "url": "http://173.208.212.130:8181/720p/cctv4.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV4.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "CCTV5",
+    "url": "http://38.75.136.137:98/gslb/dsdqpub/cctv5hd.m3u8?auth=testpub",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV5.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "CCTV6",
+    "url": "http://198.204.228.26/live/cctv6hd.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV6.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "CCTV7",
+    "url": "http://192.151.150.154/live/cctv7hd.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV7.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "CCTV8",
+    "url": "http://173.208.212.130:8181/720p/cctv8.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV8.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "CCTV9",
+    "url": "http://74.91.26.218:82/live/cctv9hd.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV9.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "CCTV10",
+    "url": "http://173.208.234.146/live/cctv10.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV10.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "CCTV11",
+    "url": "http://74.91.26.218:82/live/cctv11hd.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV11.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "CCTV12",
+    "url": "http://173.208.234.146/live/cctv12.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV12.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "CCTV13",
+    "url": "http://74.91.26.218:82/live/cctv13hd.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV13.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "CCTV16",
+    "url": "http://173.208.212.130:8181/720p/cctv16.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV16.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "CCTV17",
+    "url": "http://198.204.228.26/live/cctv17hd.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV17.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "三沙卫视",
+    "url": "http://198.204.228.26/live/ssws.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E4%B8%89%E6%B2%99%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "东南卫视",
+    "url": "http://198.204.228.26/live/dnwshd.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E4%B8%9C%E5%8D%97%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "东方卫视",
+    "url": "http://bp-resource-dfl.bestv.cn/148/3/video.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png",
+    "source": "live-fan-yoursmile"
+  },
+  {
+    "name": "东方卫视",
+    "url": "http://107.150.60.122/live/dfwshd.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "东森美洲卫视",
+    "url": "http://38.64.72.148:80/hls/modn/list/2015/chunklist0.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E4%B8%9C%E6%A3%AE%E7%BE%8E%E6%B4%B2%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "云南卫视",
+    "url": "http://198.204.228.26/live/ynwshd.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E4%BA%91%E5%8D%97%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "兵团卫视",
+    "url": "http://192.151.150.154/live/btws.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E5%85%B5%E5%9B%A2%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "内蒙古卫视",
+    "url": "http://192.151.150.154/live/nmgws.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E5%86%85%E8%92%99%E5%8F%A4%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "农林卫视",
+    "url": "http://222.90.21.30:9901/hls/66/index.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E5%86%9C%E6%9E%97%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "北京卫视",
+    "url": "http://107.150.60.122/live/bjwshd.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E5%8C%97%E4%BA%AC%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "厦门卫视",
+    "url": "http://198.204.228.26/live/xmws.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E5%8E%A6%E9%97%A8%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "吉林卫视",
+    "url": "http://38.75.136.137:98/gslb/dsdqpub/jlwshd.m3u8?auth=testpub",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E5%90%89%E6%9E%97%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "四川卫视",
+    "url": "http://204.12.221.218:8181/3m1080p/scws.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E5%9B%9B%E5%B7%9D%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "天津卫视",
+    "url": "http://173.208.212.130:8181/720p/tjws.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E5%A4%A9%E6%B4%A5%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "宁夏卫视",
+    "url": "http://192.151.150.154/live/nxws.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E5%AE%81%E5%A4%8F%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "安徽卫视",
+    "url": "http://198.204.228.26/live/ahwshd.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E5%AE%89%E5%BE%BD%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "山东卫视",
+    "url": "http://198.204.228.26/live/sdwshd.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E5%B1%B1%E4%B8%9C%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "山西卫视",
+    "url": "http://107.150.60.122/live/sxwshd.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E5%B1%B1%E8%A5%BF%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "广东新闻",
+    "url": "http://198.204.228.26/live/gdxw.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E5%B9%BF%E4%B8%9C%E6%96%B0%E9%97%BB.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "广东民生",
+    "url": "http://192.151.150.154/live/gdgg.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E5%B9%BF%E4%B8%9C%E6%B0%91%E7%94%9F.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "广西卫视",
+    "url": "http://192.151.150.154/live/gxwshd.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E5%B9%BF%E8%A5%BF%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "新疆卫视",
+    "url": "http://192.151.150.154/live/xjws.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E6%96%B0%E7%96%86%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "江苏卫视",
+    "url": "http://173.208.212.130:8181/720p/jsws.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E6%B1%9F%E8%8B%8F%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "江西卫视",
+    "url": "http://198.204.228.26/live/jxwshd.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E6%B1%9F%E8%A5%BF%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "河北卫视",
+    "url": "http://38.75.136.137:98/gslb/dsdqpub/hewshd.m3u8?auth=testpub",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E6%B2%B3%E5%8C%97%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "河南卫视",
+    "url": "http://38.75.136.137:98/gslb/dsdqpub/hawshd.m3u8?auth=testpub",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E6%B2%B3%E5%8D%97%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "湖北卫视",
+    "url": "http://204.12.221.218:8181/3m1080p/hbws.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E6%B9%96%E5%8C%97%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "湖南卫视",
+    "url": "http://74.91.26.218:82/live/hnwshd.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E6%B9%96%E5%8D%97%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "甘肃卫视",
+    "url": "http://198.204.228.26/live/gswshd.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E7%94%98%E8%82%83%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "西藏卫视",
+    "url": "http://63.141.230.178:82/gslb/zbdq5.m3u8?id=xzws",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E8%A5%BF%E8%97%8F%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "贵州卫视",
+    "url": "http://198.204.228.26/live/gzwshd.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E8%B4%B5%E5%B7%9E%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "辽宁卫视",
+    "url": "http://198.204.228.26/live/lnwshd.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E8%BE%BD%E5%AE%81%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "重庆卫视",
+    "url": "http://107.150.60.122/live/cqwshd.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E9%87%8D%E5%BA%86%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "陕西卫视",
+    "url": "http://107.150.60.122/live/snwshd.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E9%99%95%E8%A5%BF%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "青海卫视",
+    "url": "http://198.204.228.26/live/qhws.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E9%9D%92%E6%B5%B7%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "黑龙江卫视",
+    "url": "http://38.75.136.137:98/gslb/dsdqpub/hljwshd.m3u8?auth=testpub",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E9%BB%91%E9%BE%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "TVB翡翠台",
+    "url": "http://183.239.108.37:1698/hls/92/index.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/TVB%E7%BF%A1%E7%BF%A0%E5%8F%B0.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "广东卫视",
+    "url": "http://173.208.212.130:8181/720p/gdws.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E5%B9%BF%E4%B8%9C%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "深圳卫视",
+    "url": "http://198.204.228.26/live/szwshd.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E6%B7%B1%E5%9C%B3%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "浙江卫视",
+    "url": "http://173.208.212.130:8181/720p/zjws.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E6%B5%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "大湾区卫视",
+    "url": "http://198.204.228.26/live/nfws.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E5%A4%A7%E6%B9%BE%E5%8C%BA%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "CCTV1",
+    "url": "http://173.208.234.146/live/cctv1.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV1.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "CCTV2",
+    "url": "http://192.151.150.154/live/cctv2hd.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV2.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "CCTV4",
+    "url": "http://107.150.60.122/live/cctv4hd.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV4.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "CCTV5+",
+    "url": "http://38.75.136.137:98/gslb/dsdqbv/cctv5p.m3u8?auth=test20251009",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV5+.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "CCTV6",
+    "url": "http://173.208.212.130:8181/720p/cctv6.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV6.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "CCTV7",
+    "url": "http://74.91.26.218:82/live/cctv7hd.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV7.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "CCTV8",
+    "url": "http://173.208.234.146/live/cctv8.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV8.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "CCTV9",
+    "url": "http://192.151.150.154/live/cctv9hd.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV9.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "CCTV10",
+    "url": "http://74.91.26.218:82/live/cctv10hd.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV10.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "CCTV12",
+    "url": "http://74.91.26.218:82/live/cctv12hd.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV12.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "CCTV16",
+    "url": "http://107.150.60.122/live//cctv16hd.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV16.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "CCTV17",
+    "url": "http://74.91.26.218:82/live/cctv17hd.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV17.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "三沙卫视",
+    "url": "http://107.150.60.122/live/ssws.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E4%B8%89%E6%B2%99%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "东南卫视",
+    "url": "http://107.150.60.122/live/dnwshd.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E4%B8%9C%E5%8D%97%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "东方卫视",
+    "url": "http://198.204.228.26/live/dfwshd.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E4%B8%9C%E6%96%B9%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "云南卫视",
+    "url": "http://192.151.150.154/live/ynwshd.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E4%BA%91%E5%8D%97%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "兵团卫视",
+    "url": "http://198.204.228.26/live/btws.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E5%85%B5%E5%9B%A2%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "内蒙古卫视",
+    "url": "http://198.204.228.26/live/nmgws.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E5%86%85%E8%92%99%E5%8F%A4%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "南方卫视",
+    "url": "http://74.91.26.218:82/live/nfws.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E5%8D%97%E6%96%B9%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "厦门卫视",
+    "url": "http://192.151.150.154/live/xmws.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E5%8E%A6%E9%97%A8%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "吉林卫视",
+    "url": "http://107.150.60.122/live/jlwshd.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E5%90%89%E6%9E%97%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "四川卫视",
+    "url": "http://198.204.228.26/live/scwshd.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E5%9B%9B%E5%B7%9D%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "天津卫视",
+    "url": "http://198.204.228.26/live/tjwshd.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E5%A4%A9%E6%B4%A5%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "宁夏卫视",
+    "url": "http://198.204.228.26/live/nxws.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E5%AE%81%E5%A4%8F%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "安徽卫视",
+    "url": "http://173.208.212.130:8181/720p/ahws.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E5%AE%89%E5%BE%BD%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "山东卫视",
+    "url": "http://204.12.221.218:8181/3m1080p/sdws.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E5%B1%B1%E4%B8%9C%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "山西卫视",
+    "url": "http://204.12.221.218:8181/3m1080p/sxws.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E5%B1%B1%E8%A5%BF%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "广西卫视",
+    "url": "http://198.204.228.26/live/gxwshd.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E5%B9%BF%E8%A5%BF%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "新疆卫视",
+    "url": "http://198.204.228.26/live/xjws.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E6%96%B0%E7%96%86%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "江西卫视",
+    "url": "http://204.12.221.218:8181/3m1080p/jxws.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E6%B1%9F%E8%A5%BF%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "河北卫视",
+    "url": "http://63.141.230.178:82/gslb/zbdq5.m3u8?id=hewshd",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E6%B2%B3%E5%8C%97%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "河南卫视",
+    "url": "http://107.150.60.122/live/hawshd.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E6%B2%B3%E5%8D%97%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "湖北卫视",
+    "url": "http://107.150.60.122/live/hbwshd.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E6%B9%96%E5%8C%97%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "西藏卫视",
+    "url": "http://192.151.150.154/live/xzws.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E8%A5%BF%E8%97%8F%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "贵州卫视",
+    "url": "http://192.151.150.154/live/gzwshd.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E8%B4%B5%E5%B7%9E%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "辽宁卫视",
+    "url": "http://107.150.60.122/live/lnwshd.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E8%BE%BD%E5%AE%81%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "陕西卫视",
+    "url": "http://192.151.150.154/live/snwshd.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E9%99%95%E8%A5%BF%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "青海卫视",
+    "url": "http://192.151.150.154/live/qhws.m3u8",
+    "logo": "https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E9%9D%92%E6%B5%B7%E5%8D%AB%E8%A7%86.png",
+    "source": "household-pc"
+  },
+  {
+    "name": "凤凰资讯",
+    "url": "http://173.208.234.146/live/fhzx.m3u8",
+    "logo": "",
+    "source": "live-yuechan-gn"
+  }
+]
