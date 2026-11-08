@@ -1,0 +1,5 @@
+#EXTM3U
+#EXTINF:-1 group-title="直连试播",翡翠台直连一
+http://211.97.63.3:3443/hls/541/index.m3u8
+#EXTINF:-1 group-title="直连试播",翡翠台直连二
+http://183.239.108.37:1698/hls/92/index.m3u8
