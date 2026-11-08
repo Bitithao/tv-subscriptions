@@ -1,7 +1,7 @@
 name: Refresh public TV sources
 on:
   schedule:
-    - cron: '23 3,9,15,21 * * *'
+    - cron: '23 3 * * *'
   workflow_dispatch:
   push:
     paths:
@@ -21,11 +21,30 @@ jobs:
     timeout-minutes: 25
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      # GitHub cron cannot express a continuous 48-hour calendar cadence across months.
+      # Wake daily, but only contact source servers every other UTC date.
+      - name: Gate scheduled refresh to every two days
+        id: cadence
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          python3 - <<'PY'
+          import os
+          from datetime import datetime, timezone, date
+          today = datetime.now(timezone.utc).date()
+          due = os.environ['EVENT_NAME'] != 'schedule' or (today - date(2026, 11, 8)).days % 2 == 0
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
+              print('due=' + str(due).lower(), file=output)
+          print('Source refresh due' if due else 'Off day: no source requests')
+          PY
       - name: Test playlist parsing and validation
+        if: steps.cadence.outputs.due == 'true' 
         run: python3 -m unittest -v test_refresh.py
       - name: Fetch and validate public sources
+        if: steps.cadence.outputs.due == 'true'
         run: python3 update.py
       - name: Save only validated changes
+        if: steps.cadence.outputs.due == 'true'
         run: |
           git add selene.txt selene.json
           for file in live.m3u backup.m3u live-state.json health.json; do
