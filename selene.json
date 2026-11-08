@@ -144,12 +144,12 @@
   "lives": {
     "verified": {
       "name": "精选直播（去重主线）",
-      "url": "https://raw.githubusercontent.com/Bitithao/tv-subscriptions/1dec848ed78d3fcfd982176743cd4c13e57dd812/live.m3u",
+      "url": "https://raw.githubusercontent.com/Bitithao/tv-subscriptions/main/live.m3u",
       "from": "https://github.com/Bitithao/tv-subscriptions"
     },
     "backup": {
       "name": "直播备用（每台一条）",
-      "url": "https://raw.githubusercontent.com/Bitithao/tv-subscriptions/1dec848ed78d3fcfd982176743cd4c13e57dd812/backup.m3u",
+      "url": "https://raw.githubusercontent.com/Bitithao/tv-subscriptions/main/backup.m3u",
       "from": "https://github.com/Bitithao/tv-subscriptions"
     }
   }
