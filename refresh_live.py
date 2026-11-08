@@ -81,8 +81,16 @@ class SafeRedirect(urllib.request.HTTPRedirectHandler):
     max_redirections = 3
     max_repeats = 1
 
+    def __init__(self, allow_media_redirects=False):
+        super().__init__()
+        self.allow_media_redirects = allow_media_redirects
+
     def redirect_request(self, req, fp, code, msg, headers, newurl):
-        if req is None or origin(newurl) not in REDIRECT_TARGETS.get(origin(req.full_url), set()):
+        if req is None:
+            raise ValueError("Missing redirect source")
+        reviewed = origin(newurl) in REDIRECT_TARGETS.get(origin(req.full_url), set())
+        direct_media = self.allow_media_redirects and candidate_allowed(req.full_url) and candidate_allowed(newurl)
+        if not (reviewed or direct_media):
             raise ValueError("Unreviewed redirect destination")
         if urlsplit(req.full_url).scheme == 'https' and urlsplit(newurl).scheme != 'https':
             raise ValueError("HTTPS downgrade rejected")
@@ -91,11 +99,28 @@ class SafeRedirect(urllib.request.HTTPRedirectHandler):
         public_url(newurl)
         return super().redirect_request(req, fp, code, msg, headers, newurl)
 
+    def http_error_302(self, req, fp, code, msg, headers):
+        # urllib's default redirect handler reads the redirect page body. We do not.
+        try:
+            count = getattr(req, '_media_redirect_count', 0)
+            if count >= self.max_redirections:
+                raise ValueError('Media redirect limit exceeded')
+            location = headers.get('Location')
+            if not location:
+                raise ValueError('Redirect without Location')
+            new_request = self.redirect_request(req, fp, code, msg, headers, urljoin(req.full_url, location))
+            new_request._media_redirect_count = count + 1
+        finally:
+            fp.close()
+        return self.parent.open(new_request, timeout=req.timeout)
+
+    http_error_301 = http_error_303 = http_error_307 = http_error_308 = http_error_302
+
 
 def fetch(url, limit=1_000_000):
     public_url(url)
     # No explicit HTTP proxy; the desktop may still have an operating-system TUN.
-    opener = urllib.request.build_opener(urllib.request.ProxyHandler({}), SafeRedirect())
+    opener = urllib.request.build_opener(urllib.request.ProxyHandler({}), SafeRedirect(allow_media_redirects=candidate_allowed(url)))
     request = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0", "Cache-Control": "no-cache", "Range": f"bytes=0-{limit-1}"})
     with opener.open(request, timeout=TIMEOUT) as response:
         if response.headers.get_content_type() in {"text/html", "application/xhtml+xml", "text/javascript", "application/javascript"}:
@@ -152,6 +177,9 @@ def probe(item):
             if origin(target) not in media_origins:
                 raise ValueError("Off-origin media reference rejected")
             data, effective = fetch(target, limit)
+            # fetch permits bounded public M3U8 redirects and rejects script/HTML responses.
+            if candidate_allowed(target) and data.lstrip(b'\xef\xbb\xbf').startswith(b'#EXTM3U'):
+                media_origins.add(origin(effective))
             if origin(effective) not in media_origins:
                 raise ValueError("Unreviewed effective media origin")
             return data, effective
@@ -309,7 +337,7 @@ def refresh():
               "failed_probes": sum(x[2] for x in checked), "source_errors": source_errors,
               "missing_channels": [name for name, good, _, _ in checked if not good],
               "failure_reasons": {name: reasons for name, _, _, reasons in checked if reasons},
-              "note": "Only selected per-channel origins and exact reviewed CDN redirect pairs are requested. No unreviewed off-origin media. Checks two advancing video segments. Cloud reachability does not guarantee home playback or source safety; failed publication keeps the last playlist."}
+              "note": "Only selected per-channel entry origins are probed. Public M3U8 redirects are bounded and checked without reading redirect-page bodies; blocked hosts and private addresses are rejected. Media must remain on the selected or resolved playlist origin. Two advancing segments are checked. This is not a safety certification or guarantee of home playback."}
     Path("health.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     if healthy:
         Path("live.m3u").write_text(playlist(primary), encoding="utf-8")
