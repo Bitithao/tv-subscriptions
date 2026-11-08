@@ -1,0 +1,54 @@
+name: Check curated TVBox sources
+on:
+  schedule:
+    - cron: '43 3 * * *'
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/refresh-tvbox.yml
+      - refresh_tvbox.py
+      - test_refresh_tvbox.py
+      - tvbox.json
+      - tvbox-live-candidates.json
+      - tvbox-live-origins.json
+permissions:
+  contents: write
+concurrency:
+  group: refresh-tvbox-sources
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Apply the two-day cadence
+        id: cadence
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          python3 - <<'PY'
+          from datetime import date, datetime, timezone
+          import os
+          today = datetime.now(timezone.utc).date()
+          due = os.environ["EVENT_NAME"] != "schedule" or (today - date(2026, 11, 8)).days % 2 == 0
+          with open(os.environ["GITHUB_OUTPUT"], "a") as output:
+              print(f"due={str(due).lower()}", file=output)
+          print("Check due" if due else "Off day")
+          PY
+      - name: Verify validation and fallback
+        if: steps.cadence.outputs.due == 'true'
+        run: python3 -m unittest -v test_refresh.py test_refresh_tvbox.py
+      - name: Check curated routes and catalogue samples
+        if: steps.cadence.outputs.due == 'true'
+        run: python3 refresh_tvbox.py
+      - name: Publish TVBox health and usable playlists
+        if: steps.cadence.outputs.due == 'true'
+        run: |
+          git add tvbox-live.m3u tvbox-backup.m3u tvbox-health.json
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Refresh curated TVBox playlists'
+          git pull --rebase origin main
+          git push
