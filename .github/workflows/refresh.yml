@@ -1,0 +1,29 @@
+name: Refresh public TV sources
+on:
+  schedule:
+    - cron: "23 21 * * *"
+  workflow_dispatch:
+  push:
+    paths:
+      - update.py
+      - .github/workflows/refresh.yml
+permissions:
+  contents: write
+concurrency:
+  group: refresh-public-tv-sources
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Fetch and validate public sources
+        run: python3 update.py
+      - name: Save only validated changes
+        run: |
+          git add selene.txt selene.json
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Refresh public SeleneTV source list"
+          git push
