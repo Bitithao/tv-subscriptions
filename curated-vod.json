@@ -1,0 +1,17 @@
+{
+  "ikunzy.com": {
+    "api": "https://ikunzyapi.com/api.php/provide/vod",
+    "detail": "https://ikunzy.com",
+    "name": "01 iKun · 综合优先"
+  },
+  "ffzyapi.com": {
+    "api": "https://api.ffzyapi.com/api.php/provide/vod",
+    "detail": "https://cj.ffzyapi.com",
+    "name": "02 非凡 · 动漫电影"
+  },
+  "zuidazy.co": {
+    "api": "https://zuidazy.me/api.php/provide/vod",
+    "detail": "https://zuidazy.co",
+    "name": "03 最大 · 剧集备选"
+  }
+}
