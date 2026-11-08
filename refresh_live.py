@@ -22,6 +22,17 @@ PRIORITY = ["TVB翡翠台", "广东卫视", "深圳卫视", "浙江卫视", "大
 TIMEOUT = 5
 MAX_PER_CHANNEL = 30
 CN_RANGES = "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt"
+BLOCKED_HOSTS = ("jiduo.me", "jdshipin.com")
+
+
+def blocked_host(host):
+    host = (host or "").lower().rstrip(".")
+    return any(host == suffix or host.endswith("." + suffix) for suffix in BLOCKED_HOSTS)
+
+
+def candidate_allowed(url):
+    p = urlsplit(url)
+    return p.scheme in {"http", "https"} and p.path.lower().endswith(".m3u8") and not blocked_host(p.hostname)
 # Public CCSH direct routes; the first was verified on the TCL television.
 # These are preferences only: each must pass the same live-segment probe on every run.
 PREFERRED = {
@@ -34,6 +45,8 @@ PREFERRED = {
 
 def public_url(url):
     p = urlsplit(url)
+    if blocked_host(p.hostname):
+        raise ValueError("Quarantined host")
     if p.scheme not in {"http", "https"} or not p.hostname or p.username or p.password:
         raise ValueError("Unsupported URL")
     for entry in socket.getaddrinfo(p.hostname, p.port or (443 if p.scheme == "https" else 80), type=socket.SOCK_STREAM):
@@ -56,6 +69,8 @@ def fetch(url, limit=1_000_000):
     opener = urllib.request.build_opener(urllib.request.ProxyHandler({}), SafeRedirect())
     request = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0", "Cache-Control": "no-cache", "Range": f"bytes=0-{limit-1}"})
     with opener.open(request, timeout=TIMEOUT) as response:
+        if response.headers.get_content_type() in {"text/html", "application/xhtml+xml", "text/javascript", "application/javascript"}:
+            raise ValueError("HTML or script response rejected before reading body")
         return response.read(limit), response.geturl()
 
 
@@ -83,7 +98,7 @@ def parse_m3u(text, source):
             logo = re.search(r'tvg-logo="([^"\r\n]*)"', line)
             current = {"name": name, "logo": logo.group(1) if logo else "", "source": source}
         elif line and not line.startswith("#") and current:
-            if wanted(current["name"]) and urlsplit(line).scheme in {"http", "https"}:
+            if wanted(current["name"]) and candidate_allowed(line.split("|", 1)[0]):
                 yield dict(current, url=line.split("|", 1)[0])
             current = None
 
@@ -169,7 +184,8 @@ def refresh():
     candidates = defaultdict(list)
     # Retest yesterday's winners first; keep ordering stable when still healthy.
     for item in old:
-        candidates[item["name"]].append(item)
+        if candidate_allowed(item["url"]):
+            candidates[item["name"]].append(item)
     source_errors = []
     cn_starts, cn_ends = [], []
     try:
@@ -204,6 +220,8 @@ def refresh():
         items = sorted(items, key=lambda item: (preferred.index(item["url"]) if item["url"] in preferred else len(preferred), not domestic(item["url"])))
         seen, good, failed = set(), [], 0
         for item in items:
+            if not candidate_allowed(item["url"]):
+                continue
             if item["url"] in seen:
                 continue
             seen.add(item["url"])
