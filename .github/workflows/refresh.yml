@@ -1,11 +1,13 @@
 name: Refresh public TV sources
 on:
   schedule:
-    - cron: "23 21 * * *"
+    - cron: '23 3,9,15,21 * * *'
   workflow_dispatch:
   push:
     paths:
       - update.py
+      - refresh_live.py
+      - test_refresh.py
       - .github/workflows/refresh.yml
 permissions:
   contents: write
@@ -15,15 +17,21 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Test playlist parsing and validation
+        run: python3 -m unittest -v test_refresh.py
       - name: Fetch and validate public sources
         run: python3 update.py
       - name: Save only validated changes
         run: |
           git add selene.txt selene.json
+          for file in live.m3u backup.m3u live-state.json health.json; do
+            if [ -f "$file" ]; then git add "$file"; fi
+          done
           if git diff --cached --quiet; then exit 0; fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit -m "Refresh public SeleneTV source list"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Refresh public SeleneTV source list'
           git push
