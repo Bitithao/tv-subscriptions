@@ -1,2 +1,29 @@
-# tv-subscriptions
-Public SeleneTV source list. No private account data.
+# 电视订阅（SeleneTV）
+
+电视订阅地址保持不变：
+https://raw.githubusercontent.com/Bitithao/tv-subscriptions/main/selene.txt
+
+## 自动维护
+
+GitHub Actions 每天北京时间 05:23、11:23、17:23、23:23 抓取 CCSH 与 vbskycn 的公开 IPv4 直播源。GitHub 调度可能延后，不依赖家里的电脑或服务器。
+
+- 只选 TVB、凤凰、央视、地方卫视及广东地方频道。
+- 统一频道名称并合并相同 URL。
+- 每次实际读取 HLS 播放列表和一个视频分片；拒绝错误页、空列表、已结束的点播、无法验证的加密流及非公网地址。
+- 主列表每个频道只保留一条，备用列表每个频道最多一条。能用的旧线路优先保留，避免每次刷新随机换线。TVB 优先采用电视实测可播的直连候选，仍需通过每轮检测。
+- 失败线路在成功发布时剔除，后续抓取发现恢复后可重新入选。
+- 若检测结果大面积异常，或翡翠台全部失败，保留上次完整列表，避免云端网络故障清空电视订阅。此时 health.json 的 published 为 false；保留不代表重新验证成功。
+
+[查看最近更新任务](https://github.com/Bitithao/tv-subscriptions/actions/workflows/refresh.yml) · [检测报告](health.json) · [主列表](live.m3u) · [备用列表](backup.m3u)
+
+云端可访问不等于广东家庭网络一定可播，检测也不能保证未来不失效。选中主列表不能播放时，可切换一次备用列表；两条都失败可查看检测报告，不必重装应用或清空数据。
+
+电视中进入「设置 → 立即刷新订阅」可立即读取最新配置。常规更新由 Selene 自身处理，具体时机取决于客户端；仓库不会远程强制清空或重启电视。
+
+## 点播与隐私
+
+点播清单继续来自 hafrey1/LunaTV-config 的 jin18.txt。本仓库没有用户账号、代理订阅、节点、观看记录或家庭网络地址。只含公开来源与检测结果。
+
+## 维护测试
+
+运行 `python -m unittest -v test_refresh.py` 检查解析与媒体验证。`python update.py` 执行完整更新。所有发布由同一工作流串行执行，最多 25 分钟，失败不会提交半套播放列表。
