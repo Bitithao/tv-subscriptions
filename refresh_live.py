@@ -20,6 +20,14 @@ BASE = "https://raw.githubusercontent.com/Bitithao/tv-subscriptions/main/"
 PRIORITY = ["TVB翡翠台", "广东卫视", "深圳卫视", "浙江卫视", "大湾区卫视", "广东珠江", "凤凰中文", "凤凰资讯"]
 TIMEOUT = 5
 MAX_PER_CHANNEL = 30
+# Public CCSH direct routes; the first was verified on the TCL television.
+# These are preferences only: each must pass the same live-segment probe on every run.
+PREFERRED = {
+    "TVB翡翠台": [
+        "http://211.97.63.3:3443/hls/541/index.m3u8",
+        "http://183.239.108.37:1698/hls/92/index.m3u8",
+    ]
+}
 
 
 def public_url(url):
@@ -164,6 +172,8 @@ def refresh():
             source_errors.append({"source": label, "error": type(exc).__name__})
     def check_channel(pair):
         name, items = pair
+        preferred = PREFERRED.get(name, [])
+        items = sorted(items, key=lambda item: preferred.index(item["url"]) if item["url"] in preferred else len(preferred))
         seen, good, failed = set(), [], 0
         for item in items:
             if item["url"] in seen:
