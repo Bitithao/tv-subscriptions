@@ -134,10 +134,11 @@ class CuratedVODTests(unittest.TestCase):
         import update
         sites = update.load_curated_sites()
         self.assertGreaterEqual(len(sites), 9)
-        self.assertEqual(list(sites)[:3], ['ikunzy.com', 'ffzyapi.com', 'zuidazy.co'])
+        self.assertEqual(list(sites)[0], 'www.ryzyw.com')
+        self.assertTrue({'ikunzy.com', 'ffzyapi.com', 'zuidazy.co'} <= set(sites))
         self.assertEqual(len({v['api'].rstrip('/') for v in sites.values()}), len(sites))
         self.assertTrue(all(v.get('key') == k for k, v in sites.items()))
-        self.assertIn('taopianapi.com', sites)
+        self.assertNotIn('taopianapi.com', sites)
         self.assertIn('www.huyaapi.com', sites)
 
     def test_unsafe_api_is_rejected(self):
@@ -171,6 +172,38 @@ class CuratedVODTests(unittest.TestCase):
                 self.assertEqual(json.loads(update.decode58(Path('selene.txt').read_text())), payload)
             finally:
                 os.chdir(cwd)
+
+
+class PosterSafetyTests(unittest.TestCase):
+    def test_plain_http_rejected_before_fetch(self):
+        import update
+        opener = Mock()
+        self.assertTrue(update.inspect_poster('http://example.com/a.jpg', opener)['review_required'])
+        opener.open.assert_not_called()
+
+    def test_redirect_reports_host_without_opening_destination(self):
+        import update, urllib.error
+        opener = Mock()
+        opener.open.side_effect = urllib.error.HTTPError('https://example.com/a.jpg', 302, 'redirect', {'Location': 'https://other.example/landing?secret=redacted'}, None)
+        with patch('refresh_live.public_url'):
+            result = update.inspect_poster('https://example.com/a.jpg', opener)
+        self.assertTrue(result['review_required'])
+        self.assertEqual(result['redirect_host'], 'other.example')
+        self.assertEqual(opener.open.call_count, 1)
+        self.assertNotIn('secret', str(result))
+
+    def test_html_image_payload_rejected_and_read_is_bounded(self):
+        import update
+        opener = Mock()
+        response = Mock()
+        response.read.return_value = b'<html>redirect</html>'
+        opener.open.return_value.__enter__ = Mock(return_value=response)
+        opener.open.return_value.__exit__ = Mock(return_value=False)
+        with patch('refresh_live.public_url'):
+            result = update.inspect_poster('https://example.com/a.jpg', opener)
+        self.assertFalse(result['ok'])
+        self.assertTrue(result['review_required'])
+        response.read.assert_called_once_with(32)
 
 
 if __name__ == '__main__':
