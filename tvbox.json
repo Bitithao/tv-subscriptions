@@ -1,0 +1,79 @@
+{
+  "sites": [
+    {
+      "key": "youzhi",
+      "name": "优质 · 港剧电影 · 有插播",
+      "type": 1,
+      "api": "https://api.yzzy-api.com/inc/apijson.php",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    },
+    {
+      "key": "modu",
+      "name": "魔都 · 四类覆盖 · 有插播",
+      "type": 1,
+      "api": "https://caiji.moduapi.cc/api.php/provide/vod",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    },
+    {
+      "key": "baofeng",
+      "name": "暴风 · 港剧新番",
+      "type": 1,
+      "api": "https://app.bfzyapi.com/api.php/provide/vod",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    },
+    {
+      "key": "liangzi",
+      "name": "量子 · 综艺备用 · 有插播",
+      "type": 1,
+      "api": "https://lzizy1.com/api.php/provide/vod",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    },
+    {
+      "key": "feifan",
+      "name": "非凡 · 电影备用 · 有插播",
+      "type": 1,
+      "api": "https://api.ffzyapi.com/api.php/provide/vod",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    },
+    {
+      "key": "ruyi",
+      "name": "如意 · 港剧补充",
+      "type": 1,
+      "api": "https://cj.rycjapi.com/api.php/provide/vod",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    },
+    {
+      "key": "huya",
+      "name": "虎牙 · 新番备用 · 有水印",
+      "type": 1,
+      "api": "https://www.huyaapi.com/api.php/provide/vod/from/hym3u8",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 0
+    }
+  ],
+  "lives": [
+    {
+      "name": "精选直播 · 主线",
+      "type": 0,
+      "url": "https://raw.githubusercontent.com/Bitithao/tv-subscriptions/main/tvbox-live.m3u"
+    },
+    {
+      "name": "精选直播 · 备用",
+      "type": 0,
+      "url": "https://raw.githubusercontent.com/Bitithao/tv-subscriptions/main/tvbox-backup.m3u"
+    }
+  ]
+}
