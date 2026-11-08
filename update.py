@@ -42,6 +42,28 @@ def load_curated_sites(path="curated-vod.json"):
     return sites
 
 
+def inspect_poster(url, opener):
+    """Header-only HTTPS check. Does not follow redirects or execute pages."""
+    import urllib.error
+    from urllib.parse import urlsplit
+    from refresh_live import public_url
+    if not url:
+        return {"ok": False, "reason": "missing"}
+    try:
+        if urlsplit(url).scheme != "https":
+            raise ValueError("HTTPS required")
+        public_url(url)
+        request = urllib.request.Request(url, headers={"User-Agent": "SeleneTV-poster-check"})
+        with opener.open(request, timeout=8) as response:
+            header = response.read(32)
+        image = header.startswith((b"\xff\xd8\xff", b"\x89PNG\r\n\x1a\n", b"GIF87a", b"GIF89a")) or (header.startswith(b"RIFF") and header[8:12] == b"WEBP")
+        return {"ok": image, "reason": "image_header_only" if image else "not_recognized_image", "review_required": not image}
+    except urllib.error.HTTPError as exc:
+        return {"ok": False, "reason": "http_error", "status": exc.code, "redirect_host": urlsplit(exc.headers.get("Location", "")).hostname, "review_required": 300 <= exc.code < 400}
+    except Exception as exc:
+        return {"ok": False, "reason": type(exc).__name__, "review_required": True}
+
+
 def catalogue_health(sites):
     # Small catalogue checks only, once per existing two-day workflow.
     # Cloud failures must not erase sources already tested on the home network.
@@ -66,6 +88,8 @@ def catalogue_health(sites):
             if not isinstance(data, dict) or not isinstance(data.get("list"), list) or not data["list"]:
                 raise ValueError("No search matches")
             result[key] = {"catalogue_ok": True, "matches": len(data["list"])}
+            entry = next((v for v in data["list"] if v.get("vod_name") == "海贼王"), data["list"][0])
+            result[key]["poster"] = inspect_poster(entry.get("vod_pic", ""), opener)
         except Exception as exc:
             result[key] = {"catalogue_ok": False, "error_type": type(exc).__name__, "retained": True}
         result[key]["seconds"] = round(time.monotonic() - started, 2)
@@ -82,7 +106,7 @@ def main():
     health_path = Path("health.json")
     health = json.loads(health_path.read_text(encoding="utf-8")) if health_path.exists() else {}
     health["vod_catalogues"] = status
-    health["vod_note"] = "Catalogue checks only; not a full playback guarantee. Curated sources retained on transient cloud failures."
+    health["vod_note"] = "Catalogue and one poster header checked; not a malware scan or full playback guarantee. Review flags require attention; sources retained on transient cloud failures."
     health_path.write_text(json.dumps(health, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     compact = json.dumps(payload, ensure_ascii=False, separators=(",", ":")).encode()
     encoded = encode58(compact)
