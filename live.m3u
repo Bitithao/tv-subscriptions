@@ -4,7 +4,7 @@ http://218.13.139.26:9901/tsfile/live/1079_1.m3u8
 #EXTINF:-1 tvg-name="广东卫视" tvg-logo="https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E5%B9%BF%E4%B8%9C%E5%8D%AB%E8%A7%86.png" group-title="广东地方",广东卫视
 http://58.56.162.102:4466/newlive/live/hls/25/live.m3u8
 #EXTINF:-1 tvg-name="深圳卫视" tvg-logo="https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E6%B7%B1%E5%9C%B3%E5%8D%AB%E8%A7%86.png" group-title="广东地方",深圳卫视
-http://74.91.26.218:82/live/szwshd.m3u8
+http://61.136.172.236:9901/tsfile/live/0126_1.m3u8?key=txiptv&playlive=1&authid=0
 #EXTINF:-1 tvg-name="浙江卫视" tvg-logo="https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E6%B5%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png" group-title="地方卫视",浙江卫视
 http://192.151.150.154/live/zjwshd.m3u8
 #EXTINF:-1 tvg-name="大湾区卫视" tvg-logo="https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E5%A4%A7%E6%B9%BE%E5%8C%BA%E5%8D%AB%E8%A7%86.png" group-title="广东地方",大湾区卫视
@@ -41,6 +41,10 @@ http://74.91.26.218:82/live/cctv11hd.m3u8
 http://74.91.26.218:82/live/cctv12hd.m3u8
 #EXTINF:-1 tvg-name="CCTV13" tvg-logo="https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV13.png" group-title="央视",CCTV13
 http://74.91.26.218:82/live/cctv13hd.m3u8
+#EXTINF:-1 tvg-name="CCTV14" tvg-logo="https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV14.png" group-title="央视",CCTV14
+http://173.208.212.130:8181/1080p/cctv14.m3u8
+#EXTINF:-1 tvg-name="CCTV15" tvg-logo="https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV15.png" group-title="央视",CCTV15
+http://198.204.228.26/live/cctv15hd.m3u8
 #EXTINF:-1 tvg-name="CCTV16" tvg-logo="https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV16.png" group-title="央视",CCTV16
 http://173.208.212.130:8181/720p/cctv16.m3u8
 #EXTINF:-1 tvg-name="CCTV17" tvg-logo="https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV17.png" group-title="央视",CCTV17
@@ -85,6 +89,8 @@ http://173.208.212.130:8181/720p/ahws.m3u8
 http://198.204.228.26/live/sdwshd.m3u8
 #EXTINF:-1 tvg-name="山西卫视" tvg-logo="https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E5%B1%B1%E8%A5%BF%E5%8D%AB%E8%A7%86.png" group-title="地方卫视",山西卫视
 http://107.150.60.122/live/sxwshd.m3u8
+#EXTINF:-1 tvg-name="广东体育" tvg-logo="https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E5%B9%BF%E4%B8%9C%E4%BD%93%E8%82%B2.png" group-title="广东地方",广东体育
+http://198.204.228.26/live/gdty.m3u8
 #EXTINF:-1 tvg-name="广东新闻" tvg-logo="https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E5%B9%BF%E4%B8%9C%E6%96%B0%E9%97%BB.png" group-title="广东地方",广东新闻
 http://198.204.228.26/live/gdxwa.m3u8
 #EXTINF:-1 tvg-name="广东民生" tvg-logo="https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E5%B9%BF%E4%B8%9C%E6%B0%91%E7%94%9F.png" group-title="广东地方",广东民生
@@ -95,8 +101,6 @@ http://tencentplay.gztv.com/live/xinwen.m3u8?txSecret=d2c2db0b598c02ec1b56237284
 http://tencentplay.gztv.com/live/zonghes.m3u8?txSecret=c8dbe86d6f86eb1a21999ab479fd5667&txTime=18d3c4690e8
 #EXTINF:-1 tvg-name="广西卫视" tvg-logo="https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E5%B9%BF%E8%A5%BF%E5%8D%AB%E8%A7%86.png" group-title="地方卫视",广西卫视
 http://198.204.228.26/live/gxwshd.m3u8
-#EXTINF:-1 tvg-name="延边卫视" tvg-logo="https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E5%BB%B6%E8%BE%B9%E5%8D%AB%E8%A7%86.png" group-title="地方卫视",延边卫视
-http://gmxw.7766.org:808/hls/15/index.m3u8
 #EXTINF:-1 tvg-name="新疆卫视" tvg-logo="https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E6%96%B0%E7%96%86%E5%8D%AB%E8%A7%86.png" group-title="地方卫视",新疆卫视
 http://198.204.228.26/live/xjws.m3u8
 #EXTINF:-1 tvg-name="江苏卫视" tvg-logo="https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E6%B1%9F%E8%8B%8F%E5%8D%AB%E8%A7%86.png" group-title="地方卫视",江苏卫视
@@ -107,6 +111,8 @@ http://198.204.228.26/live/jxwshd.m3u8
 http://38.75.136.137:98/gslb/dsdqpub/hewshd.m3u8?auth=testpub
 #EXTINF:-1 tvg-name="河南卫视" tvg-logo="https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E6%B2%B3%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="地方卫视",河南卫视
 http://107.150.60.122/live/hawshd.m3u8
+#EXTINF:-1 tvg-name="海南卫视" tvg-logo="https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E6%B5%B7%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="地方卫视",海南卫视
+http://183.11.239.36:808/hls/124/index.m3u8
 #EXTINF:-1 tvg-name="湖北卫视" tvg-logo="https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E6%B9%96%E5%8C%97%E5%8D%AB%E8%A7%86.png" group-title="地方卫视",湖北卫视
 http://107.150.60.122/live/hbwshd.m3u8
 #EXTINF:-1 tvg-name="湖南卫视" tvg-logo="https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E6%B9%96%E5%8D%97%E5%8D%AB%E8%A7%86.png" group-title="地方卫视",湖南卫视
@@ -125,7 +131,5 @@ http://107.150.60.122/live/cqwshd.m3u8
 http://192.151.150.154/live/snwshd.m3u8
 #EXTINF:-1 tvg-name="青海卫视" tvg-logo="https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E9%9D%92%E6%B5%B7%E5%8D%AB%E8%A7%86.png" group-title="地方卫视",青海卫视
 http://198.204.228.26/live/qhws.m3u8
-#EXTINF:-1 tvg-name="香港卫视" tvg-logo="https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E9%A6%99%E6%B8%AF%E5%8D%AB%E8%A7%86.png" group-title="地方卫视",香港卫视
-http://webcast.hkstv.tv/livestream/mutfysrq/playlist.m3u8
 #EXTINF:-1 tvg-name="黑龙江卫视" tvg-logo="https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/%E9%BB%91%E9%BE%99%E6%B1%9F%E5%8D%AB%E8%A7%86.png" group-title="地方卫视",黑龙江卫视
 http://38.75.136.137:98/gslb/dsdqpub/hljwshd.m3u8?auth=testpub

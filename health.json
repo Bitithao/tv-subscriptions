@@ -1,62 +1,142 @@
 {
-  "checked_at_utc": "2026-11-08T04:51:16.504174+00:00",
+  "checked_at_utc": "2026-11-10T11:27:03.132347+00:00",
   "location": "GitHub hosted runner",
   "published": true,
-  "candidates": 155,
-  "unapproved_candidates_not_requested": 729,
-  "channels_passed": 65,
-  "backup_channels": 53,
-  "failed_probes": 21,
+  "candidates": 154,
+  "unapproved_candidates_not_requested": 751,
+  "channels_passed": 67,
+  "backup_channels": 55,
+  "failed_probes": 11,
   "source_errors": [],
   "missing_channels": [
-    "CCTV14",
-    "CCTV15",
-    "广东体育",
-    "海南卫视"
+    "延边卫视",
+    "香港卫视"
   ],
   "failure_reasons": {
-    "广东卫视": {
+    "深圳卫视": {
       "TimeoutError": 1
     },
-    "深圳卫视": {
-      "TimeoutError": 2
+    "CCTV1": {
+      "ValueError: Live playlist did not advance": 1
     },
-    "CCTV5": {
-      "ValueError: HTML or script response rejected before reading body": 3
-    },
-    "CCTV11": {
-      "URLError": 1
-    },
-    "CCTV14": {
-      "URLError": 2
-    },
-    "CCTV15": {
-      "URLError": 3
+    "CCTV12": {
+      "ValueError: Live playlist did not advance": 1
     },
     "北京卫视": {
       "ValueError: Off-origin media reference rejected": 1
     },
-    "广东体育": {
-      "HTTPError: 404": 2
-    },
-    "延边卫视": {
+    "厦门卫视": {
       "ValueError: Live playlist did not advance": 1
     },
-    "海南卫视": {
-      "TimeoutError": 1
+    "宁夏卫视": {
+      "ValueError: Live playlist did not advance": 1
+    },
+    "延边卫视": {
+      "TimeoutError": 1,
+      "ValueError: Live playlist did not advance": 1
     },
     "湖南卫视": {
       "ValueError: Off-origin media reference rejected": 1
     },
-    "甘肃卫视": {
+    "贵州卫视": {
       "ValueError: Live playlist did not advance": 1
     },
-    "重庆卫视": {
-      "ValueError: Live playlist did not advance": 1
-    },
-    "黑龙江卫视": {
-      "ValueError: Media redirect limit exceeded": 1
+    "香港卫视": {
+      "HTTPError: 403": 1
     }
   },
-  "note": "Only selected per-channel entry origins are probed. Public M3U8 redirects are bounded and checked without reading redirect-page bodies; blocked hosts and private addresses are rejected. Media must remain on the selected or resolved playlist origin. Two advancing segments are checked. This is not a safety certification or guarantee of home playback."
+  "note": "Only selected per-channel entry origins are probed. Public M3U8 redirects are bounded and checked without reading redirect-page bodies; blocked hosts and private addresses are rejected. Media must remain on the selected or resolved playlist origin. Two advancing segments are checked. This is not a safety certification or guarantee of home playback.",
+  "vod_catalogues": {
+    "www.ryzyw.com": {
+      "catalogue_ok": true,
+      "matches": 7,
+      "poster": {
+        "ok": true,
+        "reason": "image_header_only",
+        "review_required": false
+      },
+      "seconds": 3.54
+    },
+    "ffzyapi.com": {
+      "catalogue_ok": true,
+      "matches": 20,
+      "poster": {
+        "ok": true,
+        "reason": "image_header_only",
+        "review_required": false
+      },
+      "seconds": 1.95
+    },
+    "zuidazy.co": {
+      "catalogue_ok": true,
+      "matches": 19,
+      "poster": {
+        "ok": true,
+        "reason": "image_header_only",
+        "review_required": false
+      },
+      "seconds": 2.65
+    },
+    "1080zyk4.com": {
+      "catalogue_ok": true,
+      "matches": 18,
+      "poster": {
+        "ok": true,
+        "reason": "image_header_only",
+        "review_required": false
+      },
+      "seconds": 1.7
+    },
+    "cj.lzcaiji.com": {
+      "catalogue_ok": true,
+      "matches": 20,
+      "poster": {
+        "ok": true,
+        "reason": "image_header_only",
+        "review_required": false
+      },
+      "seconds": 3.19
+    },
+    "ikunzy.com": {
+      "catalogue_ok": true,
+      "matches": 20,
+      "poster": {
+        "ok": true,
+        "reason": "image_header_only",
+        "review_required": false
+      },
+      "seconds": 1.22
+    },
+    "caiji.moduapi.cc": {
+      "catalogue_ok": true,
+      "matches": 7,
+      "poster": {
+        "ok": true,
+        "reason": "image_header_only",
+        "review_required": false
+      },
+      "seconds": 1.28
+    },
+    "www.huyaapi.com": {
+      "catalogue_ok": true,
+      "matches": 10,
+      "poster": {
+        "ok": true,
+        "reason": "image_header_only",
+        "review_required": false
+      },
+      "seconds": 2.79
+    },
+    "360zy.com": {
+      "catalogue_ok": true,
+      "matches": 6,
+      "poster": {
+        "ok": true,
+        "reason": "image_header_only",
+        "review_required": false
+      },
+      "seconds": 1.09
+    }
+  },
+  "vod_note": "Catalogue and one poster header checked; not a malware scan or full playback guarantee. Review flags require attention; sources retained on transient cloud failures."
 }
