@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-10T11:47:35.866404+00:00",
+  "checked_at": "2026-11-12T11:51:46.369435+00:00",
   "vod": {
     "youzhi": {
       "catalogue_ok": true,
@@ -59,7 +59,7 @@
     "passing_primary": 59,
     "passing_backup": 35,
     "unavailable_channels": [
-      "河北卫视"
+      "江苏卫视"
     ],
     "published": true,
     "retained_previous": false
