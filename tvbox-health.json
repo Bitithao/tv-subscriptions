@@ -1,11 +1,12 @@
 {
-  "checked_at": "2026-11-12T11:51:46.369435+00:00",
+  "checked_at": "2026-11-14T10:56:36.680294+00:00",
   "vod": {
     "youzhi": {
       "catalogue_ok": true,
       "sample": {
-        "ok": false,
-        "reason": "http_403"
+        "ok": true,
+        "reason": "segment_read",
+        "episode": 1180
       }
     },
     "modu": {
@@ -26,8 +27,9 @@
     "liangzi": {
       "catalogue_ok": true,
       "sample": {
-        "ok": false,
-        "reason": "http_404"
+        "ok": true,
+        "reason": "segment_read",
+        "episode": 1180
       }
     },
     "feifan": {
@@ -56,10 +58,12 @@
   "live": {
     "routes_checked": 101,
     "expected_channels": 60,
-    "passing_primary": 59,
-    "passing_backup": 35,
+    "passing_primary": 57,
+    "passing_backup": 39,
     "unavailable_channels": [
-      "江苏卫视"
+      "凤凰中文",
+      "凤凰资讯",
+      "北京卫视"
     ],
     "published": true,
     "retained_previous": false
