@@ -1,12 +1,11 @@
 {
-  "checked_at": "2026-11-14T10:56:36.680294+00:00",
+  "checked_at": "2026-11-16T12:03:47.789554+00:00",
   "vod": {
     "youzhi": {
       "catalogue_ok": true,
       "sample": {
-        "ok": true,
-        "reason": "segment_read",
-        "episode": 1180
+        "ok": false,
+        "reason": "http_403"
       }
     },
     "modu": {
@@ -27,9 +26,8 @@
     "liangzi": {
       "catalogue_ok": true,
       "sample": {
-        "ok": true,
-        "reason": "segment_read",
-        "episode": 1180
+        "ok": false,
+        "reason": "http_404"
       }
     },
     "feifan": {
@@ -48,22 +46,19 @@
       }
     },
     "huya": {
-      "catalogue_ok": true,
-      "sample": {
-        "ok": false,
-        "reason": "encrypted_hls"
-      }
+      "catalogue_ok": false,
+      "reason": "KeyError"
     }
   },
   "live": {
     "routes_checked": 101,
     "expected_channels": 60,
     "passing_primary": 57,
-    "passing_backup": 39,
+    "passing_backup": 37,
     "unavailable_channels": [
+      "CCTV3",
       "凤凰中文",
-      "凤凰资讯",
-      "北京卫视"
+      "凤凰资讯"
     ],
     "published": true,
     "retained_previous": false
