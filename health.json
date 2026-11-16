@@ -1,59 +1,68 @@
 {
-  "checked_at_utc": "2026-11-14T10:41:40.854426+00:00",
+  "checked_at_utc": "2026-11-16T11:41:52.578326+00:00",
   "location": "GitHub hosted runner",
   "published": true,
   "candidates": 138,
-  "unapproved_candidates_not_requested": 923,
-  "channels_passed": 67,
-  "backup_channels": 52,
-  "failed_probes": 18,
+  "unapproved_candidates_not_requested": 934,
+  "channels_passed": 63,
+  "backup_channels": 49,
+  "failed_probes": 19,
   "source_errors": [],
   "missing_channels": [
-    "凤凰中文"
+    "凤凰中文",
+    "广东体育",
+    "广州新闻",
+    "广州综合",
+    "延边卫视"
   ],
   "failure_reasons": {
-    "广东卫视": {
-      "TimeoutError": 1
-    },
     "深圳卫视": {
-      "TimeoutError": 2
+      "TimeoutError": 1
     },
     "广东珠江": {
       "ValueError: HTML or script response rejected before reading body": 1
     },
     "凤凰中文": {
-      "HTTPError: 404": 2
-    },
-    "CCTV1": {
-      "ValueError: Live playlist did not advance": 1
-    },
-    "CCTV3": {
-      "ValueError: Live playlist did not advance": 1
+      "HTTPError: 404": 1
     },
     "CCTV16": {
-      "ValueError: Live playlist did not advance": 1
+      "ValueError: Live playlist did not advance": 2
     },
-    "CCTV17": {
+    "云南卫视": {
       "ValueError: Live playlist did not advance": 1
     },
     "北京卫视": {
       "ValueError: Off-origin media reference rejected": 1
     },
-    "四川卫视": {
+    "天津卫视": {
       "ValueError: Live playlist did not advance": 1
+    },
+    "安徽卫视": {
+      "ValueError: Live playlist did not advance": 1
+    },
+    "广东体育": {
+      "HTTPError: 404": 2
     },
     "广东新闻": {
       "ValueError: HTML or script response rejected before reading body": 1
     },
+    "广州新闻": {
+      "URLError": 1
+    },
+    "广州综合": {
+      "URLError": 1
+    },
+    "延边卫视": {
+      "TimeoutError": 1
+    },
     "湖南卫视": {
       "ValueError: Off-origin media reference rejected": 1
     },
-    "西藏卫视": {
-      "ValueError: Media redirect limit exceeded": 1,
-      "ValueError: HTML or script response rejected before reading body": 2
-    },
-    "辽宁卫视": {
+    "甘肃卫视": {
       "ValueError: Live playlist did not advance": 1
+    },
+    "西藏卫视": {
+      "ValueError: HTML or script response rejected before reading body": 2
     }
   },
   "note": "Only selected per-channel entry origins are probed. Public M3U8 redirects are bounded and checked without reading redirect-page bodies; blocked hosts and private addresses are rejected. Media must remain on the selected or resolved playlist origin. Two advancing segments are checked. This is not a safety certification or guarantee of home playback.",
@@ -66,7 +75,7 @@
         "reason": "image_header_only",
         "review_required": false
       },
-      "seconds": 3.92
+      "seconds": 3.88
     },
     "ffzyapi.com": {
       "catalogue_ok": true,
@@ -76,17 +85,17 @@
         "reason": "image_header_only",
         "review_required": false
       },
-      "seconds": 1.69
+      "seconds": 1.77
     },
     "zuidazy.co": {
       "catalogue_ok": true,
-      "matches": 19,
+      "matches": 20,
       "poster": {
         "ok": true,
         "reason": "image_header_only",
         "review_required": false
       },
-      "seconds": 5.37
+      "seconds": 0.65
     },
     "1080zyk4.com": {
       "catalogue_ok": true,
@@ -96,7 +105,7 @@
         "reason": "image_header_only",
         "review_required": false
       },
-      "seconds": 2.43
+      "seconds": 2.11
     },
     "cj.lzcaiji.com": {
       "catalogue_ok": true,
@@ -106,7 +115,7 @@
         "reason": "image_header_only",
         "review_required": false
       },
-      "seconds": 2.67
+      "seconds": 3.69
     },
     "ikunzy.com": {
       "catalogue_ok": true,
@@ -116,7 +125,7 @@
         "reason": "image_header_only",
         "review_required": false
       },
-      "seconds": 0.86
+      "seconds": 0.82
     },
     "caiji.moduapi.cc": {
       "catalogue_ok": true,
@@ -126,7 +135,7 @@
         "reason": "image_header_only",
         "review_required": false
       },
-      "seconds": 0.78
+      "seconds": 1.17
     },
     "www.huyaapi.com": {
       "catalogue_ok": true,
@@ -136,7 +145,7 @@
         "reason": "image_header_only",
         "review_required": false
       },
-      "seconds": 0.68
+      "seconds": 0.72
     },
     "360zy.com": {
       "catalogue_ok": true,
@@ -146,7 +155,7 @@
         "reason": "image_header_only",
         "review_required": false
       },
-      "seconds": 1.56
+      "seconds": 2.26
     }
   },
   "vod_note": "Catalogue and one poster header checked; not a malware scan or full playback guarantee. Review flags require attention; sources retained on transient cloud failures."
