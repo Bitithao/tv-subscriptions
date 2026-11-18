@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-16T12:03:47.789554+00:00",
+  "checked_at": "2026-11-18T12:16:42.224672+00:00",
   "vod": {
     "youzhi": {
       "catalogue_ok": true,
@@ -46,8 +46,11 @@
       }
     },
     "huya": {
-      "catalogue_ok": false,
-      "reason": "KeyError"
+      "catalogue_ok": true,
+      "sample": {
+        "ok": false,
+        "reason": "encrypted_hls"
+      }
     }
   },
   "live": {
@@ -56,11 +59,11 @@
     "passing_primary": 57,
     "passing_backup": 37,
     "unavailable_channels": [
-      "CCTV3",
+      "TVB翡翠台",
       "凤凰中文",
       "凤凰资讯"
     ],
-    "published": true,
-    "retained_previous": false
+    "published": false,
+    "retained_previous": true
   }
 }
