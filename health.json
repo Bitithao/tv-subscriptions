@@ -1,61 +1,51 @@
 {
-  "checked_at_utc": "2026-11-18T11:57:27.493874+00:00",
+  "checked_at_utc": "2026-11-20T11:55:40.456197+00:00",
   "location": "GitHub hosted runner",
   "published": true,
-  "candidates": 138,
-  "unapproved_candidates_not_requested": 920,
+  "candidates": 145,
+  "unapproved_candidates_not_requested": 951,
   "channels_passed": 64,
-  "backup_channels": 46,
-  "failed_probes": 21,
+  "backup_channels": 48,
+  "failed_probes": 19,
   "source_errors": [],
   "missing_channels": [
-    "凤凰中文",
-    "CCTV14",
-    "CCTV15",
-    "海南卫视"
+    "广东体育",
+    "延边卫视"
   ],
   "failure_reasons": {
     "TVB翡翠台": {
-      "TimeoutError": 1
-    },
-    "深圳卫视": {
       "TimeoutError": 2
     },
     "广东珠江": {
       "ValueError: HTML or script response rejected before reading body": 1
     },
-    "凤凰中文": {
-      "HTTPError: 404": 1
-    },
-    "CCTV2": {
+    "CCTV7": {
       "ValueError: Live playlist did not advance": 1
     },
-    "CCTV8": {
-      "URLError": 1
+    "东方卫视": {
+      "ValueError: Live playlist did not advance": 1
     },
-    "CCTV14": {
-      "URLError": 2
-    },
-    "CCTV15": {
-      "URLError": 2
+    "内蒙古卫视": {
+      "ValueError: Live playlist did not advance": 1
     },
     "北京卫视": {
       "ValueError: Off-origin media reference rejected": 1
     },
-    "厦门卫视": {
+    "四川卫视": {
       "ValueError: Live playlist did not advance": 1
     },
-    "山西卫视": {
-      "ValueError: Live playlist did not advance": 1
+    "广东体育": {
+      "HTTPError: 404": 2
     },
     "广东新闻": {
       "ValueError: HTML or script response rejected before reading body": 1
     },
-    "广西卫视": {
-      "ValueError: Live playlist did not advance": 1
+    "延边卫视": {
+      "TimeoutError": 1,
+      "ValueError: Live playlist did not advance": 2
     },
-    "海南卫视": {
-      "TimeoutError": 1
+    "河北卫视": {
+      "ValueError: Live playlist did not advance": 1
     },
     "湖南卫视": {
       "ValueError: Off-origin media reference rejected": 1
@@ -63,7 +53,7 @@
     "西藏卫视": {
       "ValueError: HTML or script response rejected before reading body": 2
     },
-    "贵州卫视": {
+    "黑龙江卫视": {
       "ValueError: Live playlist did not advance": 1
     }
   },
@@ -77,7 +67,7 @@
         "reason": "image_header_only",
         "review_required": false
       },
-      "seconds": 4.0
+      "seconds": 2.81
     },
     "ffzyapi.com": {
       "catalogue_ok": true,
@@ -87,7 +77,7 @@
         "reason": "image_header_only",
         "review_required": false
       },
-      "seconds": 2.36
+      "seconds": 1.61
     },
     "zuidazy.co": {
       "catalogue_ok": true,
@@ -97,7 +87,7 @@
         "reason": "image_header_only",
         "review_required": false
       },
-      "seconds": 0.62
+      "seconds": 0.24
     },
     "1080zyk4.com": {
       "catalogue_ok": true,
@@ -107,7 +97,7 @@
         "reason": "image_header_only",
         "review_required": false
       },
-      "seconds": 2.57
+      "seconds": 1.65
     },
     "cj.lzcaiji.com": {
       "catalogue_ok": true,
@@ -117,7 +107,7 @@
         "reason": "image_header_only",
         "review_required": false
       },
-      "seconds": 4.22
+      "seconds": 2.32
     },
     "ikunzy.com": {
       "catalogue_ok": true,
@@ -127,7 +117,7 @@
         "reason": "image_header_only",
         "review_required": false
       },
-      "seconds": 1.0
+      "seconds": 0.59
     },
     "caiji.moduapi.cc": {
       "catalogue_ok": true,
@@ -137,7 +127,7 @@
         "reason": "image_header_only",
         "review_required": false
       },
-      "seconds": 7.53
+      "seconds": 0.59
     },
     "www.huyaapi.com": {
       "catalogue_ok": true,
@@ -147,7 +137,7 @@
         "reason": "image_header_only",
         "review_required": false
       },
-      "seconds": 0.87
+      "seconds": 0.74
     },
     "360zy.com": {
       "catalogue_ok": true,
@@ -157,7 +147,7 @@
         "reason": "image_header_only",
         "review_required": false
       },
-      "seconds": 1.7
+      "seconds": 1.94
     }
   },
   "vod_note": "Catalogue and one poster header checked; not a malware scan or full playback guarantee. Review flags require attention; sources retained on transient cloud failures."
