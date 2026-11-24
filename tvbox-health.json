@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-22T11:59:44.775152+00:00",
+  "checked_at": "2026-11-24T14:18:10.403754+00:00",
   "vod": {
     "youzhi": {
       "catalogue_ok": true,
@@ -56,12 +56,11 @@
   "live": {
     "routes_checked": 101,
     "expected_channels": 60,
-    "passing_primary": 57,
-    "passing_backup": 34,
+    "passing_primary": 58,
+    "passing_backup": 33,
     "unavailable_channels": [
       "凤凰中文",
-      "凤凰资讯",
-      "江苏卫视"
+      "凤凰资讯"
     ],
     "published": true,
     "retained_previous": false
