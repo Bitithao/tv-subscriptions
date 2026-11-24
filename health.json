@@ -1,57 +1,74 @@
 {
-  "checked_at_utc": "2026-11-22T11:41:57.034503+00:00",
+  "checked_at_utc": "2026-11-24T13:57:06.376828+00:00",
   "location": "GitHub hosted runner",
   "published": true,
   "candidates": 145,
-  "unapproved_candidates_not_requested": 951,
+  "unapproved_candidates_not_requested": 952,
   "channels_passed": 63,
-  "backup_channels": 52,
-  "failed_probes": 16,
+  "backup_channels": 45,
+  "failed_probes": 21,
   "source_errors": [],
   "missing_channels": [
-    "广州新闻",
-    "广州综合",
-    "海南卫视"
+    "CCTV6",
+    "海南卫视",
+    "贵州卫视"
   ],
   "failure_reasons": {
-    "TVB翡翠台": {
-      "TimeoutError": 2
-    },
     "广东卫视": {
+      "TimeoutError": 1
+    },
+    "深圳卫视": {
       "TimeoutError": 1
     },
     "广东珠江": {
       "ValueError: HTML or script response rejected before reading body": 1
     },
-    "CCTV15": {
+    "CCTV1": {
+      "URLError": 1
+    },
+    "CCTV6": {
       "URLError": 2
+    },
+    "CCTV8": {
+      "URLError": 1
+    },
+    "CCTV17": {
+      "ValueError: Live playlist did not advance": 1
     },
     "北京卫视": {
       "ValueError: Off-origin media reference rejected": 1
     },
+    "四川卫视": {
+      "ValueError: Live playlist did not advance": 1
+    },
+    "天津卫视": {
+      "ValueError: Live playlist did not advance": 1
+    },
     "广东新闻": {
       "ValueError: HTML or script response rejected before reading body": 1
     },
-    "广州新闻": {
-      "URLError": 1
-    },
-    "广州综合": {
-      "URLError": 1
+    "广东民生": {
+      "ValueError: Live playlist did not advance": 1
     },
     "延边卫视": {
-      "ValueError: Live playlist did not advance": 1,
       "TimeoutError": 1
-    },
-    "河南卫视": {
-      "ValueError: Live playlist did not advance": 1
     },
     "海南卫视": {
       "TimeoutError": 1
+    },
+    "湖北卫视": {
+      "ValueError: Live playlist did not advance": 1
     },
     "湖南卫视": {
       "ValueError: Off-origin media reference rejected": 1
     },
     "甘肃卫视": {
+      "ValueError: Live playlist did not advance": 1
+    },
+    "贵州卫视": {
+      "ValueError: Live playlist did not advance": 2
+    },
+    "重庆卫视": {
       "ValueError: Live playlist did not advance": 1
     }
   },
@@ -65,7 +82,7 @@
         "reason": "image_header_only",
         "review_required": false
       },
-      "seconds": 3.56
+      "seconds": 4.02
     },
     "ffzyapi.com": {
       "catalogue_ok": true,
@@ -75,7 +92,7 @@
         "reason": "image_header_only",
         "review_required": false
       },
-      "seconds": 2.31
+      "seconds": 2.38
     },
     "zuidazy.co": {
       "catalogue_ok": true,
@@ -85,7 +102,7 @@
         "reason": "image_header_only",
         "review_required": false
       },
-      "seconds": 0.64
+      "seconds": 0.5
     },
     "1080zyk4.com": {
       "catalogue_ok": true,
@@ -95,7 +112,7 @@
         "reason": "image_header_only",
         "review_required": false
       },
-      "seconds": 2.18
+      "seconds": 2.32
     },
     "cj.lzcaiji.com": {
       "catalogue_ok": true,
@@ -105,7 +122,7 @@
         "reason": "image_header_only",
         "review_required": false
       },
-      "seconds": 3.22
+      "seconds": 3.59
     },
     "ikunzy.com": {
       "catalogue_ok": true,
@@ -115,7 +132,7 @@
         "reason": "image_header_only",
         "review_required": false
       },
-      "seconds": 0.76
+      "seconds": 1.11
     },
     "caiji.moduapi.cc": {
       "catalogue_ok": true,
@@ -125,7 +142,7 @@
         "reason": "image_header_only",
         "review_required": false
       },
-      "seconds": 0.85
+      "seconds": 1.04
     },
     "www.huyaapi.com": {
       "catalogue_ok": true,
@@ -135,7 +152,7 @@
         "reason": "image_header_only",
         "review_required": false
       },
-      "seconds": 0.75
+      "seconds": 0.84
     },
     "360zy.com": {
       "catalogue_ok": true,
@@ -145,7 +162,7 @@
         "reason": "image_header_only",
         "review_required": false
       },
-      "seconds": 4.09
+      "seconds": 2.31
     }
   },
   "vod_note": "Catalogue and one poster header checked; not a malware scan or full playback guarantee. Review flags require attention; sources retained on transient cloud failures."
