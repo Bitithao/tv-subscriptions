@@ -1,509 +1,517 @@
 {
-  "published_at": "2026-11-24T13:57:06.376828+00:00",
+  "published_at": "2026-11-26T12:51:39.530621+00:00",
   "selected": [
     {
       "name": "TVB翡翠台",
       "url": "http://218.13.139.26:9901/tsfile/live/1079_1.m3u8",
       "logo": "",
       "source": "Selected direct candidate",
-      "checked_at": 1795528364.4453146,
-      "probe_ms": 10614
+      "checked_at": 1795697217.3606653,
+      "probe_ms": 9650
     },
     {
       "name": "广东卫视",
       "url": "http://58.56.162.102:4466/newlive/live/hls/25/live.m3u8",
       "logo": "",
       "source": "Selected direct candidate",
-      "checked_at": 1795528370.9974887,
-      "probe_ms": 17165
+      "checked_at": 1795697225.3317122,
+      "probe_ms": 17620
     },
     {
       "name": "深圳卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/深圳卫视.png",
       "source": "Previously selected",
       "url": "http://74.91.26.218:82/live/szwshd.m3u8",
-      "checked_at": 1795528400.780006,
-      "probe_ms": 11328
+      "checked_at": 1795697243.2877588,
+      "probe_ms": 13130
     },
     {
       "name": "浙江卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/浙江卫视.png",
       "source": "CCSH",
       "url": "http://173.208.212.130:8181/720p/zjws.m3u8",
-      "checked_at": 1795528365.095044,
-      "probe_ms": 11262
+      "checked_at": 1795697221.1304696,
+      "probe_ms": 13418
     },
     {
       "name": "大湾区卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/大湾区卫视.png",
       "source": "CCSH",
       "url": "http://198.204.228.26/live/nfws.m3u8",
-      "checked_at": 1795528365.1756616,
-      "probe_ms": 11340
+      "checked_at": 1795697220.295594,
+      "probe_ms": 12580
     },
     {
       "name": "广东珠江",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/广东珠江.png",
       "source": "CCSH",
       "url": "http://198.204.228.26/live/gdzj.m3u8",
-      "checked_at": 1795528365.194177,
-      "probe_ms": 11356
+      "checked_at": 1795697220.2988236,
+      "probe_ms": 12581
     },
     {
       "name": "CCTV1",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV1.png",
       "source": "CCSH",
       "url": "http://173.208.234.146/live/cctv1.m3u8",
-      "checked_at": 1795528376.6065102,
-      "probe_ms": 11315
+      "checked_at": 1795697232.557139,
+      "probe_ms": 12135
     },
     {
       "name": "CCTV2",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV2.png",
       "source": "CCSH",
       "url": "http://173.208.234.146/live/cctv2.m3u8",
-      "checked_at": 1795528387.756865,
-      "probe_ms": 11338
+      "checked_at": 1795697245.1568565,
+      "probe_ms": 12132
     },
     {
       "name": "CCTV3",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV3.png",
       "source": "CCSH",
       "url": "http://74.91.26.218:82/live/cctv3hd.m3u8",
-      "checked_at": 1795528387.8774254,
-      "probe_ms": 11341
+      "checked_at": 1795697246.3872783,
+      "probe_ms": 12127
     },
     {
       "name": "CCTV4",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV4.png",
       "source": "CCSH",
       "url": "http://107.150.60.122/live/cctv4hd.m3u8",
-      "checked_at": 1795528387.921317,
-      "probe_ms": 11315
+      "checked_at": 1795697256.8354516,
+      "probe_ms": 12130
     },
     {
       "name": "CCTV5",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV5.png",
       "source": "CCSH",
       "url": "http://38.75.136.137:98/gslb/dsdqpub/cctv5hd.m3u8?auth=testpub",
-      "checked_at": 1795528412.474269,
-      "probe_ms": 12399
+      "checked_at": 1795697261.0805895,
+      "probe_ms": 12109
     },
     {
       "name": "CCTV5+",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV5+.png",
       "source": "Previously selected",
       "url": "http://118.193.115.2:9901/tsfile/live/0141_1.m3u8?key=txiptv",
-      "checked_at": 1795528416.8372447,
-      "probe_ms": 16651
+      "checked_at": 1795697278.4404867,
+      "probe_ms": 24883
+    },
+    {
+      "name": "CCTV6",
+      "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV6.png",
+      "source": "CCSH",
+      "url": "http://173.208.212.130:8181/720p/cctv6.m3u8",
+      "checked_at": 1795697268.585028,
+      "probe_ms": 12136
     },
     {
       "name": "CCTV7",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV7.png",
       "source": "CCSH",
       "url": "http://74.91.26.218:82/live/cctv7hd.m3u8",
-      "checked_at": 1795528411.6936867,
-      "probe_ms": 11322
+      "checked_at": 1795697275.3870027,
+      "probe_ms": 15339
     },
     {
       "name": "CCTV8",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV8.png",
       "source": "CCSH",
       "url": "http://173.208.234.146/live/cctv8.m3u8",
-      "checked_at": 1795528412.7474244,
-      "probe_ms": 11354
+      "checked_at": 1795697273.872067,
+      "probe_ms": 13320
     },
     {
       "name": "CCTV9",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV9.png",
       "source": "CCSH",
       "url": "http://192.151.150.154/live/cctv9hd.m3u8",
-      "checked_at": 1795528423.4353335,
-      "probe_ms": 11318
+      "checked_at": 1795697281.6329448,
+      "probe_ms": 12124
     },
     {
       "name": "CCTV10",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV10.png",
       "source": "CCSH",
       "url": "http://173.208.234.146/live/cctv10.m3u8",
-      "checked_at": 1795528424.1077182,
-      "probe_ms": 11303
+      "checked_at": 1795697285.4093432,
+      "probe_ms": 12127
     },
     {
       "name": "CCTV11",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV11.png",
       "source": "CCSH",
       "url": "http://74.91.26.218:82/live/cctv11hd.m3u8",
-      "checked_at": 1795528431.236688,
-      "probe_ms": 11331
+      "checked_at": 1795697292.8364081,
+      "probe_ms": 12125
     },
     {
       "name": "CCTV12",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV12.png",
       "source": "CCSH",
       "url": "http://74.91.26.218:82/live/cctv12hd.m3u8",
-      "checked_at": 1795528434.3522887,
-      "probe_ms": 11324
+      "checked_at": 1795697298.152138,
+      "probe_ms": 12158
     },
     {
       "name": "CCTV13",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV13.png",
       "source": "CCSH",
       "url": "http://74.91.26.218:82/live/cctv13hd.m3u8",
-      "checked_at": 1795528435.165381,
-      "probe_ms": 11326
+      "checked_at": 1795697302.3747625,
+      "probe_ms": 12211
     },
     {
       "name": "CCTV15",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV15.png",
       "source": "CCSH",
       "url": "http://198.204.228.26/live/cctv15hd.m3u8",
-      "checked_at": 1795528441.4802177,
-      "probe_ms": 13256
+      "checked_at": 1795697305.960007,
+      "probe_ms": 12154
     },
     {
       "name": "CCTV16",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV16.png",
       "source": "CCSH",
       "url": "http://173.208.212.130:8181/1080p/cctv16.m3u8",
-      "checked_at": 1795528446.8530514,
-      "probe_ms": 12076
+      "checked_at": 1795697307.6525989,
+      "probe_ms": 12829
     },
     {
       "name": "CCTV17",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV17.png",
       "source": "CCSH",
       "url": "http://74.91.26.218:82/live/cctv17hd.m3u8",
-      "checked_at": 1795528446.5006657,
-      "probe_ms": 11335
+      "checked_at": 1795697309.6754866,
+      "probe_ms": 12142
     },
     {
       "name": "三沙卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/三沙卫视.png",
       "source": "CCSH",
       "url": "http://107.150.60.122/live/ssws.m3u8",
-      "checked_at": 1795528446.7628756,
-      "probe_ms": 11318
+      "checked_at": 1795697315.5112116,
+      "probe_ms": 13136
     },
     {
       "name": "东南卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/东南卫视.png",
       "source": "CCSH",
       "url": "http://198.204.228.26/live/dnwshd.m3u8",
-      "checked_at": 1795528454.9789662,
-      "probe_ms": 12423
+      "checked_at": 1795697318.386256,
+      "probe_ms": 13418
     },
     {
       "name": "东方卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/东方卫视.png",
       "source": "CCSH",
       "url": "http://198.204.228.26/live/dfwshd.m3u8",
-      "checked_at": 1795528458.0433817,
-      "probe_ms": 12373
+      "checked_at": 1795697323.2075477,
+      "probe_ms": 13126
     },
     {
       "name": "东森美洲卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/东森美洲卫视.png",
       "source": "Previously selected",
       "url": "http://38.64.72.148:80/hls/modn/list/2015/chunklist0.m3u8",
-      "checked_at": 1795528461.2050352,
-      "probe_ms": 8368
+      "checked_at": 1795697325.9437082,
+      "probe_ms": 7841
     },
     {
       "name": "云南卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/云南卫视.png",
       "source": "CCSH",
       "url": "http://192.151.150.154/live/ynwshd.m3u8",
-      "checked_at": 1795528470.4508705,
-      "probe_ms": 12272
+      "checked_at": 1795697332.68901,
+      "probe_ms": 12883
     },
     {
       "name": "人间卫视",
       "logo": "https://tb.zbds.top/logo/人间卫视.png",
       "source": "Previously selected",
       "url": "https://5ddce30eb4b55.streamlock.net/bltvhd/bltv1/chunklist_w511254805.m3u8",
-      "checked_at": 1795528471.2503283,
-      "probe_ms": 13054
+      "checked_at": 1795697337.3621962,
+      "probe_ms": 13948
     },
     {
       "name": "兵团卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/兵团卫视.png",
       "source": "CCSH",
       "url": "http://198.204.228.26/live/btws.m3u8",
-      "checked_at": 1795528470.4371572,
-      "probe_ms": 11359
+      "checked_at": 1795697340.6429884,
+      "probe_ms": 12535
     },
     {
       "name": "内蒙古卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/内蒙古卫视.png",
       "source": "CCSH",
       "url": "http://192.151.150.154/live/nmgws.m3u8",
-      "checked_at": 1795528479.094416,
-      "probe_ms": 11809
+      "checked_at": 1795697344.302164,
+      "probe_ms": 13769
     },
     {
       "name": "农林卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/农林卫视.png",
       "source": "Previously selected",
       "url": "http://222.90.21.30:9901/hls/66/index.m3u8",
-      "checked_at": 1795528480.6788661,
-      "probe_ms": 11093
+      "checked_at": 1795697345.1124635,
+      "probe_ms": 11416
     },
     {
       "name": "北京卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/北京卫视.png",
       "source": "CCSH",
       "url": "http://107.150.60.122/live/bjwshd.m3u8",
-      "checked_at": 1795528483.6150765,
-      "probe_ms": 13264
+      "checked_at": 1795697348.483542,
+      "probe_ms": 12132
     },
     {
       "name": "南方卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/南方卫视.png",
       "source": "Previously selected",
       "url": "http://120.237.39.10:9901/tsfile/live/1012_1.m3u8?key=txiptv&playlive=1&down=1",
-      "checked_at": 1795528488.545225,
-      "probe_ms": 17295
+      "checked_at": 1795697351.2848895,
+      "probe_ms": 13923
     },
     {
       "name": "厦门卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/厦门卫视.png",
       "source": "CCSH",
-      "url": "http://192.151.150.154/live/xmws.m3u8",
-      "checked_at": 1795528493.0734622,
-      "probe_ms": 11325
+      "url": "http://198.204.228.26/live/xmws.m3u8",
+      "checked_at": 1795697370.0970097,
+      "probe_ms": 12149
     },
     {
       "name": "吉林卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/吉林卫视.png",
       "source": "CCSH",
       "url": "http://38.75.136.137:98/gslb/dsdqpub/jlwshd.m3u8?auth=testpub",
-      "checked_at": 1795528494.1322496,
-      "probe_ms": 11369
+      "checked_at": 1795697363.6807756,
+      "probe_ms": 13139
     },
     {
       "name": "四川卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/四川卫视.png",
       "source": "CCSH",
       "url": "http://204.12.221.218:8181/3m1080p/scws.m3u8",
-      "checked_at": 1795528507.553755,
-      "probe_ms": 11477
+      "checked_at": 1795697366.2820504,
+      "probe_ms": 12507
     },
     {
       "name": "天津卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/天津卫视.png",
       "source": "CCSH",
       "url": "http://198.204.228.26/live/tjwshd.m3u8",
-      "checked_at": 1795528515.8710115,
-      "probe_ms": 11358
+      "checked_at": 1795697368.777282,
+      "probe_ms": 13568
     },
     {
       "name": "宁夏卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/宁夏卫视.png",
       "source": "CCSH",
       "url": "http://198.204.228.26/live/nxws.m3u8",
-      "checked_at": 1795528504.1236074,
-      "probe_ms": 12362
+      "checked_at": 1795697371.7267754,
+      "probe_ms": 13514
     },
     {
       "name": "安多卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/安多卫视.png",
       "source": "Previously selected",
       "url": "http://39.164.143.66:13994/tsfile/live/1004_1.m3u8?key=txiptv&playlive=1&authid=0",
-      "checked_at": 1795528527.658323,
-      "probe_ms": 27814
+      "checked_at": 1795697379.4854505,
+      "probe_ms": 16035
     },
     {
       "name": "安徽卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/安徽卫视.png",
       "source": "CCSH",
       "url": "http://198.204.228.26/live/ahwshd.m3u8",
-      "checked_at": 1795528517.714044,
-      "probe_ms": 13293
+      "checked_at": 1795697380.8206203,
+      "probe_ms": 10723
     },
     {
       "name": "山东卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/山东卫视.png",
       "source": "CCSH",
       "url": "http://198.204.228.26/live/sdwshd.m3u8",
-      "checked_at": 1795528516.8907099,
-      "probe_ms": 11453
+      "checked_at": 1795697388.419234,
+      "probe_ms": 12596
     },
     {
       "name": "山西卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/山西卫视.png",
       "source": "CCSH",
       "url": "http://107.150.60.122/live/sxwshd.m3u8",
-      "checked_at": 1795528518.8136947,
-      "probe_ms": 11260
-    },
-    {
-      "name": "广东体育",
-      "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/广东体育.png",
-      "source": "CCSH",
-      "url": "http://192.151.150.154/live/gdty.m3u8",
-      "checked_at": 1795528527.175866,
-      "probe_ms": 11305
+      "checked_at": 1795697392.8176072,
+      "probe_ms": 12888
     },
     {
       "name": "广东新闻",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/广东新闻.png",
       "source": "CCSH",
       "url": "http://198.204.228.26/live/gdxw.m3u8",
-      "checked_at": 1795528527.141013,
-      "probe_ms": 10524
+      "checked_at": 1795697394.4678195,
+      "probe_ms": 12614
     },
     {
       "name": "广东民生",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/广东民生.png",
       "source": "CCSH",
       "url": "http://198.204.228.26/live/gdgg.m3u8",
-      "checked_at": 1795528549.611865,
-      "probe_ms": 11258
+      "checked_at": 1795697397.478789,
+      "probe_ms": 11983
     },
     {
       "name": "广州新闻",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/广州新闻.png",
       "source": "CCSH",
       "url": "http://tencentplay.gztv.com/live/xinwen.m3u8?txSecret=d2c2db0b598c02ec1b5623728434d367&txTime=18d57929bd3",
-      "checked_at": 1795528538.9908357,
-      "probe_ms": 10615
+      "checked_at": 1795697400.6509736,
+      "probe_ms": 9958
     },
     {
       "name": "广州综合",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/广州综合.png",
       "source": "CCSH",
       "url": "http://tencentplay.gztv.com/live/zonghes.m3u8?txSecret=c8dbe86d6f86eb1a21999ab479fd5667&txTime=18d3c4690e8",
-      "checked_at": 1795528541.648118,
-      "probe_ms": 11557
+      "checked_at": 1795697403.4593356,
+      "probe_ms": 9010
     },
     {
       "name": "广西卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/广西卫视.png",
       "source": "CCSH",
       "url": "http://192.151.150.154/live/gxwshd.m3u8",
-      "checked_at": 1795528542.8900325,
-      "probe_ms": 12340
+      "checked_at": 1795697408.3983226,
+      "probe_ms": 13807
     },
     {
       "name": "延边卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/延边卫视.png",
       "source": "CCSH",
       "url": "http://gmxw.7766.org:808/hls/15/index.m3u8",
-      "checked_at": 1795528597.352035,
-      "probe_ms": 58864
+      "checked_at": 1795697443.961869,
+      "probe_ms": 43311
     },
     {
       "name": "新疆卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/新疆卫视.png",
       "source": "CCSH",
       "url": "http://198.204.228.26/live/xjws.m3u8",
-      "checked_at": 1795528550.3019352,
-      "probe_ms": 11311
+      "checked_at": 1795697414.4158247,
+      "probe_ms": 13465
     },
     {
       "name": "江苏卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/江苏卫视.png",
       "source": "CCSH",
       "url": "http://173.208.212.130:8181/720p/jsws.m3u8",
-      "checked_at": 1795528553.9575496,
-      "probe_ms": 12309
+      "checked_at": 1795697416.6028426,
+      "probe_ms": 13143
     },
     {
       "name": "江西卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/江西卫视.png",
       "source": "CCSH",
       "url": "http://198.204.228.26/live/jxwshd.m3u8",
-      "checked_at": 1795528555.3225188,
-      "probe_ms": 11330
+      "checked_at": 1795697418.8449693,
+      "probe_ms": 12260
     },
     {
       "name": "河北卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/河北卫视.png",
       "source": "CCSH",
       "url": "http://63.141.230.178:82/gslb/zbdq5.m3u8?id=hewshd",
-      "checked_at": 1795528562.0019393,
-      "probe_ms": 12390
+      "checked_at": 1795697422.6429667,
+      "probe_ms": 13268
     },
     {
       "name": "河南卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/河南卫视.png",
       "source": "CCSH",
       "url": "http://107.150.60.122/live/hawshd.m3u8",
-      "checked_at": 1795528566.5654573,
-      "probe_ms": 11355
+      "checked_at": 1795697434.2065592,
+      "probe_ms": 12135
     },
     {
       "name": "湖北卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/湖北卫视.png",
       "source": "CCSH",
       "url": "http://107.150.60.122/live/hbwshd.m3u8",
-      "checked_at": 1795528578.614054,
-      "probe_ms": 12313
+      "checked_at": 1795697442.0579767,
+      "probe_ms": 13204
     },
     {
       "name": "湖南卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/湖南卫视.png",
       "source": "CCSH",
       "url": "http://74.91.26.218:82/live/hnwshd.m3u8",
-      "checked_at": 1795528578.0178535,
-      "probe_ms": 11337
+      "checked_at": 1795697445.6175568,
+      "probe_ms": 14933
     },
     {
       "name": "甘肃卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/甘肃卫视.png",
       "source": "CCSH",
       "url": "http://198.204.228.26/live/gswshd.m3u8",
-      "checked_at": 1795528598.954943,
-      "probe_ms": 12323
+      "checked_at": 1795697448.5092983,
+      "probe_ms": 13131
     },
     {
       "name": "西藏卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/西藏卫视.png",
       "source": "CCSH",
       "url": "http://192.151.150.154/live/xzws.m3u8",
-      "checked_at": 1795528588.5379698,
-      "probe_ms": 12246
+      "checked_at": 1795697459.282568,
+      "probe_ms": 12878
+    },
+    {
+      "name": "贵州卫视",
+      "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/贵州卫视.png",
+      "source": "CCSH",
+      "url": "http://192.151.150.154/live/gzwshd.m3u8",
+      "checked_at": 1795697459.313395,
+      "probe_ms": 12141
     },
     {
       "name": "辽宁卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/辽宁卫视.png",
       "source": "CCSH",
       "url": "http://107.150.60.122/live/lnwshd.m3u8",
-      "checked_at": 1795528590.2857888,
-      "probe_ms": 11351
+      "checked_at": 1795697468.696658,
+      "probe_ms": 13133
     },
     {
       "name": "重庆卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/重庆卫视.png",
       "source": "CCSH",
       "url": "http://198.204.228.26/live/cqwshd.m3u8",
-      "checked_at": 1795528613.4568276,
-      "probe_ms": 11401
+      "checked_at": 1795697475.4974632,
+      "probe_ms": 13835
     },
     {
       "name": "陕西卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/陕西卫视.png",
       "source": "CCSH",
       "url": "http://192.151.150.154/live/snwshd.m3u8",
-      "checked_at": 1795528610.2091105,
-      "probe_ms": 11254
+      "checked_at": 1795697476.9176147,
+      "probe_ms": 12889
     },
     {
       "name": "青海卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/青海卫视.png",
       "source": "CCSH",
       "url": "http://198.204.228.26/live/qhws.m3u8",
-      "checked_at": 1795528613.2123885,
-      "probe_ms": 12365
+      "checked_at": 1795697485.9024248,
+      "probe_ms": 13623
     },
     {
       "name": "黑龙江卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/黑龙江卫视.png",
       "source": "CCSH",
       "url": "http://38.75.136.137:98/gslb/dsdqpub/hljwshd.m3u8?auth=testpub",
-      "checked_at": 1795528614.006793,
-      "probe_ms": 12377
+      "checked_at": 1795697486.2563539,
+      "probe_ms": 13191
     },
     {
       "name": "TVB翡翠台",
@@ -511,363 +519,411 @@
       "url": "http://183.239.108.37:1698/hls/92/index.m3u8",
       "logo": "",
       "source": "CCSH; direct media check passed; TV playback pending",
-      "checked_at": 1795528401.3930206,
+      "checked_at": 1795697248.9715729,
       "measured_width": 720,
       "measured_height": 576,
       "measured_fps": 25,
-      "probe_ms": 36948
+      "probe_ms": 31611
     },
     {
       "name": "广东卫视",
-      "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/广东卫视.png",
-      "source": "CCSH",
-      "url": "http://173.208.212.130:8181/720p/gdws.m3u8",
-      "checked_at": 1795528419.9057703,
-      "probe_ms": 12316
+      "url": "http://183.11.239.36:808/hls/80/index.m3u8",
+      "logo": "",
+      "source": "Selected direct candidate",
+      "checked_at": 1795697253.5576024,
+      "probe_ms": 28226
     },
     {
       "name": "深圳卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/深圳卫视.png",
       "source": "CCSH",
       "url": "http://198.204.228.26/live/szwshd.m3u8",
-      "checked_at": 1795528412.117696,
-      "probe_ms": 11338
+      "checked_at": 1795697256.4483545,
+      "probe_ms": 13161
     },
     {
       "name": "浙江卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/浙江卫视.png",
       "source": "CCSH",
       "url": "http://192.151.150.154/live/zjwshd.m3u8",
-      "checked_at": 1795528376.419006,
-      "probe_ms": 11324
+      "checked_at": 1795697234.2598326,
+      "probe_ms": 13129
     },
     {
       "name": "大湾区卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/大湾区卫视.png",
       "source": "CCSH",
       "url": "http://192.151.150.154/live/nfws.m3u8",
-      "checked_at": 1795528376.536296,
-      "probe_ms": 11361
+      "checked_at": 1795697233.0248296,
+      "probe_ms": 12729
+    },
+    {
+      "name": "CCTV1",
+      "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV1.png",
+      "source": "CCSH",
+      "url": "http://198.204.228.26/live/cctv1hd.m3u8",
+      "checked_at": 1795697244.705311,
+      "probe_ms": 12148
     },
     {
       "name": "CCTV2",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV2.png",
       "source": "CCSH",
       "url": "http://192.151.150.154/live/cctv2hd.m3u8",
-      "checked_at": 1795528400.075589,
-      "probe_ms": 12319
+      "checked_at": 1795697260.5517888,
+      "probe_ms": 15395
     },
     {
       "name": "CCTV3",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV3.png",
       "source": "CCSH",
       "url": "http://173.208.212.130:8181/1080p/cctv3.m3u8",
-      "checked_at": 1795528400.1862555,
-      "probe_ms": 12309
+      "checked_at": 1795697260.0479398,
+      "probe_ms": 13661
     },
     {
       "name": "CCTV4",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV4.png",
       "source": "CCSH",
       "url": "http://173.208.212.130:8181/720p/cctv4.m3u8",
-      "checked_at": 1795528400.245707,
-      "probe_ms": 12324
+      "checked_at": 1795697269.508939,
+      "probe_ms": 12673
     },
     {
       "name": "CCTV5",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV5.png",
       "source": "CCSH",
       "url": "http://38.75.136.137:98/gslb/dsdqpub/cctv5p.m3u8?auth=testpub",
-      "checked_at": 1795528423.839154,
-      "probe_ms": 11365
+      "checked_at": 1795697273.2821577,
+      "probe_ms": 12202
     },
     {
       "name": "CCTV5+",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV5+.png",
       "source": "CCSH",
       "url": "http://38.75.136.137:98/gslb/dsdqbv/cctv5p.m3u8?auth=test20251009",
-      "checked_at": 1795528428.223694,
-      "probe_ms": 11386
+      "checked_at": 1795697294.8234293,
+      "probe_ms": 16383
+    },
+    {
+      "name": "CCTV6",
+      "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV6.png",
+      "source": "CCSH",
+      "url": "http://198.204.228.26/live/cctv6hd.m3u8",
+      "checked_at": 1795697280.7111368,
+      "probe_ms": 12126
     },
     {
       "name": "CCTV7",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV7.png",
       "source": "CCSH",
       "url": "http://192.151.150.154/live/cctv7hd.m3u8",
-      "checked_at": 1795528423.0280442,
-      "probe_ms": 11334
+      "checked_at": 1795697290.163612,
+      "probe_ms": 14777
+    },
+    {
+      "name": "CCTV8",
+      "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV8.png",
+      "source": "CCSH",
+      "url": "http://173.208.212.130:8181/720p/cctv8.m3u8",
+      "checked_at": 1795697285.9938211,
+      "probe_ms": 12122
     },
     {
       "name": "CCTV9",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV9.png",
       "source": "CCSH",
       "url": "http://74.91.26.218:82/live/cctv9hd.m3u8",
-      "checked_at": 1795528434.7766604,
-      "probe_ms": 11341
+      "checked_at": 1795697293.8058383,
+      "probe_ms": 12173
     },
     {
       "name": "CCTV10",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV10.png",
       "source": "CCSH",
       "url": "http://74.91.26.218:82/live/cctv10hd.m3u8",
-      "checked_at": 1795528435.44452,
-      "probe_ms": 11337
+      "checked_at": 1795697297.5330362,
+      "probe_ms": 12124
     },
     {
       "name": "CCTV11",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV11.png",
       "source": "CCSH",
       "url": "http://107.150.60.122/live/cctv11hd.m3u8",
-      "checked_at": 1795528442.5560338,
-      "probe_ms": 11319
+      "checked_at": 1795697304.968272,
+      "probe_ms": 12132
     },
     {
       "name": "CCTV12",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV12.png",
       "source": "CCSH",
       "url": "http://173.208.234.146/live/cctv12.m3u8",
-      "checked_at": 1795528445.6705499,
-      "probe_ms": 11318
+      "checked_at": 1795697310.0815053,
+      "probe_ms": 11929
     },
     {
       "name": "CCTV15",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV15.png",
       "source": "CCSH",
       "url": "http://173.208.212.130:8181/1080p/cctv15.m3u8",
-      "checked_at": 1795528452.837079,
-      "probe_ms": 11357
+      "checked_at": 1795697318.102179,
+      "probe_ms": 12142
     },
     {
       "name": "CCTV16",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV16.png",
       "source": "CCSH",
       "url": "http://107.150.60.122/live/cctv16hd.m3u8",
-      "checked_at": 1795528458.1786602,
-      "probe_ms": 11326
+      "checked_at": 1795697319.8061826,
+      "probe_ms": 12154
+    },
+    {
+      "name": "CCTV17",
+      "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/CCTV17.png",
+      "source": "CCSH",
+      "url": "http://198.204.228.26/live/cctv17hd.m3u8",
+      "checked_at": 1795697323.4135966,
+      "probe_ms": 13738
     },
     {
       "name": "三沙卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/三沙卫视.png",
       "source": "CCSH",
       "url": "http://198.204.228.26/live/ssws.m3u8",
-      "checked_at": 1795528458.1964126,
-      "probe_ms": 11434
+      "checked_at": 1795697328.1081927,
+      "probe_ms": 12597
     },
     {
       "name": "东南卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/东南卫视.png",
       "source": "CCSH",
       "url": "http://107.150.60.122/live/dnwshd.m3u8",
-      "checked_at": 1795528467.2855844,
-      "probe_ms": 12307
+      "checked_at": 1795697330.5333104,
+      "probe_ms": 12147
     },
     {
       "name": "东方卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/东方卫视.png",
       "source": "CCSH",
       "url": "http://107.150.60.122/live/dfwshd.m3u8",
-      "checked_at": 1795528470.3513446,
-      "probe_ms": 12308
+      "checked_at": 1795697336.3515909,
+      "probe_ms": 13144
     },
     {
       "name": "东森美洲卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/东森美洲卫视.png",
       "source": "Previously selected",
       "url": "http://38.64.72.148/hls/modn/list/2015/playlist.m3u8",
-      "checked_at": 1795528469.585276,
-      "probe_ms": 8380
+      "checked_at": 1795697333.6966882,
+      "probe_ms": 7753
     },
     {
       "name": "云南卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/云南卫视.png",
       "source": "CCSH",
       "url": "http://198.204.228.26/live/ynwshd.m3u8",
-      "checked_at": 1795528482.762678,
-      "probe_ms": 12312
+      "checked_at": 1795697346.2039835,
+      "probe_ms": 13515
     },
     {
       "name": "兵团卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/兵团卫视.png",
       "source": "CCSH",
       "url": "http://192.151.150.154/live/btws.m3u8",
-      "checked_at": 1795528481.748813,
-      "probe_ms": 11312
+      "checked_at": 1795697353.774526,
+      "probe_ms": 13132
     },
     {
       "name": "内蒙古卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/内蒙古卫视.png",
       "source": "CCSH",
       "url": "http://198.204.228.26/live/nmgws.m3u8",
-      "checked_at": 1795528490.8295853,
-      "probe_ms": 11735
+      "checked_at": 1795697358.2128053,
+      "probe_ms": 13911
     },
     {
       "name": "农林卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/农林卫视.png",
       "source": "CCSH",
       "url": "http://222.90.21.30:9901/hls/66/index.m3u8#http://gxlive.snrtv.com/nlws-SD.m3u8",
-      "checked_at": 1795528491.7612095,
-      "probe_ms": 11082
+      "checked_at": 1795697355.2094681,
+      "probe_ms": 10097
     },
     {
       "name": "南方卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/南方卫视.png",
       "source": "Previously selected",
       "url": "http://74.91.26.218:82/live/nfws.m3u8",
-      "checked_at": 1795528499.8443513,
-      "probe_ms": 11299
-    },
-    {
-      "name": "厦门卫视",
-      "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/厦门卫视.png",
-      "source": "CCSH",
-      "url": "http://198.204.228.26/live/xmws.m3u8",
-      "checked_at": 1795528504.4209273,
-      "probe_ms": 11347
+      "checked_at": 1795697363.4505038,
+      "probe_ms": 12166
     },
     {
       "name": "吉林卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/吉林卫视.png",
       "source": "CCSH",
       "url": "http://107.150.60.122/live/jlwshd.m3u8",
-      "checked_at": 1795528505.4376547,
-      "probe_ms": 11305
+      "checked_at": 1795697375.8230214,
+      "probe_ms": 12142
+    },
+    {
+      "name": "四川卫视",
+      "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/四川卫视.png",
+      "source": "CCSH",
+      "url": "http://198.204.228.26/live/scwshd.m3u8",
+      "checked_at": 1795697379.9294124,
+      "probe_ms": 13647
+    },
+    {
+      "name": "天津卫视",
+      "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/天津卫视.png",
+      "source": "CCSH",
+      "url": "http://173.208.212.130:8181/720p/tjws.m3u8",
+      "checked_at": 1795697381.3721552,
+      "probe_ms": 12595
     },
     {
       "name": "宁夏卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/宁夏卫视.png",
       "source": "CCSH",
       "url": "http://192.151.150.154/live/nxws.m3u8",
-      "checked_at": 1795528516.6164064,
-      "probe_ms": 12493
+      "checked_at": 1795697385.4957187,
+      "probe_ms": 13769
     },
     {
       "name": "安多卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/安多卫视.png",
       "source": "Previously selected",
       "url": "https://liveout.xntv.tv/a65jur/96iln2.m3u8",
-      "checked_at": 1795528543.9922028,
-      "probe_ms": 16334
+      "checked_at": 1795697390.6930656,
+      "probe_ms": 11208
     },
     {
       "name": "安徽卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/安徽卫视.png",
       "source": "CCSH",
       "url": "http://173.208.212.130:8181/720p/ahws.m3u8",
-      "checked_at": 1795528530.0909705,
-      "probe_ms": 12377
+      "checked_at": 1795697394.449514,
+      "probe_ms": 13629
     },
     {
       "name": "山东卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/山东卫视.png",
       "source": "CCSH",
       "url": "http://204.12.221.218:8181/3m1080p/sdws.m3u8",
-      "checked_at": 1795528528.375739,
-      "probe_ms": 11485
+      "checked_at": 1795697400.9509442,
+      "probe_ms": 12532
     },
     {
       "name": "山西卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/山西卫视.png",
       "source": "CCSH",
       "url": "http://204.12.221.218:8181/3m1080p/sxws.m3u8",
-      "checked_at": 1795528530.5501783,
-      "probe_ms": 11736
+      "checked_at": 1795697406.5852528,
+      "probe_ms": 13768
     },
     {
-      "name": "广东体育",
-      "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/广东体育.png",
+      "name": "广东民生",
+      "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/广东民生.png",
       "source": "CCSH",
-      "url": "http://198.204.228.26/live/gdty.m3u8",
-      "checked_at": 1795528538.4877572,
-      "probe_ms": 11312
+      "url": "http://192.151.150.154/live/gdgg.m3u8",
+      "checked_at": 1795697409.3744566,
+      "probe_ms": 11896
     },
     {
       "name": "广西卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/广西卫视.png",
       "source": "CCSH",
       "url": "http://198.204.228.26/live/gxwshd.m3u8",
-      "checked_at": 1795528555.2099524,
-      "probe_ms": 12320
+      "checked_at": 1795697422.0716295,
+      "probe_ms": 13673
     },
     {
       "name": "新疆卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/新疆卫视.png",
       "source": "CCSH",
       "url": "http://192.151.150.154/live/xjws.m3u8",
-      "checked_at": 1795528561.6431317,
-      "probe_ms": 11341
+      "checked_at": 1795697427.9348826,
+      "probe_ms": 13519
     },
     {
       "name": "江苏卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/江苏卫视.png",
       "source": "CCSH",
       "url": "http://173.208.212.130:8181/1080p/jsws.m3u8",
-      "checked_at": 1795528566.3005416,
-      "probe_ms": 12343
-    },
-    {
-      "name": "江西卫视",
-      "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/江西卫视.png",
-      "source": "CCSH",
-      "url": "http://204.12.221.218:8181/3m1080p/jxws.m3u8",
-      "checked_at": 1795528566.6811836,
-      "probe_ms": 11359
-    },
-    {
-      "name": "河北卫视",
-      "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/河北卫视.png",
-      "source": "CCSH",
-      "url": "http://38.75.136.137:98/gslb/dsdqpub/hewshd.m3u8?auth=testpub",
-      "checked_at": 1795528574.3974571,
-      "probe_ms": 12395
+      "checked_at": 1795697428.853797,
+      "probe_ms": 12251
     },
     {
       "name": "河南卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/河南卫视.png",
       "source": "CCSH",
       "url": "http://38.75.136.137:98/gslb/dsdqpub/hawshd.m3u8?auth=testpub",
-      "checked_at": 1795528577.9521158,
-      "probe_ms": 11387
+      "checked_at": 1795697446.404504,
+      "probe_ms": 12198
+    },
+    {
+      "name": "湖北卫视",
+      "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/湖北卫视.png",
+      "source": "CCSH",
+      "url": "http://204.12.221.218:8181/3m1080p/hbws.m3u8",
+      "checked_at": 1795697455.563319,
+      "probe_ms": 13505
+    },
+    {
+      "name": "甘肃卫视",
+      "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/甘肃卫视.png",
+      "source": "CCSH",
+      "url": "http://192.151.150.154/live/gswshd.m3u8",
+      "checked_at": 1795697461.6622002,
+      "probe_ms": 13153
     },
     {
       "name": "西藏卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/西藏卫视.png",
       "source": "CCSH",
       "url": "http://63.141.230.178:82/gslb/zbdq5.m3u8?id=xzws",
-      "checked_at": 1795528600.8468418,
-      "probe_ms": 12309
+      "checked_at": 1795697472.2792919,
+      "probe_ms": 12997
+    },
+    {
+      "name": "贵州卫视",
+      "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/贵州卫视.png",
+      "source": "CCSH",
+      "url": "http://198.204.228.26/live/gzwshd.m3u8",
+      "checked_at": 1795697473.0647695,
+      "probe_ms": 13751
     },
     {
       "name": "辽宁卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/辽宁卫视.png",
       "source": "CCSH",
       "url": "http://198.204.228.26/live/lnwshd.m3u8",
-      "checked_at": 1795528601.62923,
-      "probe_ms": 11343
+      "checked_at": 1795697481.8353698,
+      "probe_ms": 13139
+    },
+    {
+      "name": "重庆卫视",
+      "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/重庆卫视.png",
+      "source": "CCSH",
+      "url": "http://107.150.60.122/live/cqwshd.m3u8",
+      "checked_at": 1795697488.7187765,
+      "probe_ms": 13221
     },
     {
       "name": "陕西卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/陕西卫视.png",
       "source": "CCSH",
       "url": "http://107.150.60.122/live/snwshd.m3u8",
-      "checked_at": 1795528621.5565906,
-      "probe_ms": 11347
-    },
-    {
-      "name": "青海卫视",
-      "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/青海卫视.png",
-      "source": "CCSH",
-      "url": "http://192.151.150.154/live/qhws.m3u8",
-      "checked_at": 1795528625.0546875,
-      "probe_ms": 11842
+      "checked_at": 1795697490.0576668,
+      "probe_ms": 13140
     },
     {
       "name": "黑龙江卫视",
       "logo": "https://ghfast.top/https://raw.githubusercontent.com/CCSH/IPTV/refs/heads/main/logo/黑龙江卫视.png",
       "source": "CCSH",
       "url": "http://63.141.230.178:82/gslb/zbdq5.m3u8?id=hljwshd",
-      "checked_at": 1795528626.376105,
-      "probe_ms": 12369
+      "checked_at": 1795697499.530068,
+      "probe_ms": 13274
     }
   ]
 }
