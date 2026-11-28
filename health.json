@@ -1,54 +1,32 @@
 {
-  "checked_at_utc": "2026-11-26T12:51:39.530621+00:00",
+  "checked_at_utc": "2026-11-28T12:01:13.989548+00:00",
   "location": "GitHub hosted runner",
   "published": true,
-  "candidates": 148,
-  "unapproved_candidates_not_requested": 952,
+  "candidates": 121,
+  "unapproved_candidates_not_requested": 751,
   "channels_passed": 64,
-  "backup_channels": 51,
-  "failed_probes": 16,
+  "backup_channels": 53,
+  "failed_probes": 6,
   "source_errors": [],
   "missing_channels": [
-    "广东体育",
-    "海南卫视"
+    "北京卫视"
   ],
   "failure_reasons": {
-    "深圳卫视": {
-      "TimeoutError": 1
+    "CCTV5+": {
+      "ValueError: Live playlist did not advance": 1
     },
-    "广东珠江": {
-      "ValueError: HTML or script response rejected before reading body": 1
+    "CCTV7": {
+      "ValueError: Live playlist did not advance": 1
     },
     "北京卫视": {
+      "ValueError: Live playlist did not advance": 1,
       "ValueError: Off-origin media reference rejected": 1
     },
-    "厦门卫视": {
-      "ValueError: Live playlist did not advance": 1
-    },
-    "广东体育": {
-      "HTTPError: 404": 2
-    },
-    "广东新闻": {
-      "ValueError: HTML or script response rejected before reading body": 1
-    },
     "延边卫视": {
-      "ValueError: Live playlist did not advance": 2
-    },
-    "江西卫视": {
       "ValueError: Live playlist did not advance": 1
-    },
-    "河北卫视": {
-      "ValueError: Live playlist did not advance": 1
-    },
-    "海南卫视": {
-      "TimeoutError": 1
     },
     "湖南卫视": {
       "ValueError: Off-origin media reference rejected": 1
-    },
-    "青海卫视": {
-      "ValueError: Live playlist did not advance": 1,
-      "ValueError: HTML or script response rejected before reading body": 2
     }
   },
   "note": "Only selected per-channel entry origins are probed. Public M3U8 redirects are bounded and checked without reading redirect-page bodies; blocked hosts and private addresses are rejected. Media must remain on the selected or resolved playlist origin. Two advancing segments are checked. This is not a safety certification or guarantee of home playback.",
@@ -61,7 +39,7 @@
         "reason": "image_header_only",
         "review_required": false
       },
-      "seconds": 3.22
+      "seconds": 3.47
     },
     "ffzyapi.com": {
       "catalogue_ok": true,
@@ -71,7 +49,7 @@
         "reason": "image_header_only",
         "review_required": false
       },
-      "seconds": 2.08
+      "seconds": 2.2
     },
     "zuidazy.co": {
       "catalogue_ok": true,
@@ -81,7 +59,7 @@
         "reason": "image_header_only",
         "review_required": false
       },
-      "seconds": 0.31
+      "seconds": 0.67
     },
     "1080zyk4.com": {
       "catalogue_ok": true,
@@ -91,7 +69,7 @@
         "reason": "image_header_only",
         "review_required": false
       },
-      "seconds": 1.31
+      "seconds": 2.19
     },
     "cj.lzcaiji.com": {
       "catalogue_ok": true,
@@ -101,7 +79,7 @@
         "reason": "image_header_only",
         "review_required": false
       },
-      "seconds": 2.97
+      "seconds": 3.6
     },
     "ikunzy.com": {
       "catalogue_ok": true,
@@ -111,7 +89,7 @@
         "reason": "image_header_only",
         "review_required": false
       },
-      "seconds": 0.56
+      "seconds": 0.75
     },
     "caiji.moduapi.cc": {
       "catalogue_ok": true,
@@ -121,13 +99,17 @@
         "reason": "image_header_only",
         "review_required": false
       },
-      "seconds": 0.94
+      "seconds": 1.35
     },
     "www.huyaapi.com": {
-      "catalogue_ok": false,
-      "error_type": "ValueError",
-      "retained": true,
-      "seconds": 0.18
+      "catalogue_ok": true,
+      "matches": 10,
+      "poster": {
+        "ok": true,
+        "reason": "image_header_only",
+        "review_required": false
+      },
+      "seconds": 0.88
     },
     "360zy.com": {
       "catalogue_ok": true,
@@ -137,7 +119,7 @@
         "reason": "image_header_only",
         "review_required": false
       },
-      "seconds": 1.93
+      "seconds": 2.14
     }
   },
   "vod_note": "Catalogue and one poster header checked; not a malware scan or full playback guarantee. Review flags require attention; sources retained on transient cloud failures."
